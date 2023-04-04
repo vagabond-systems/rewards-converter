@@ -42,14 +42,14 @@ public class RewardValue {
     }
 
 
-    public int convert_from_cash_to_miles() {
-        return (int) (cashValue/0.0035);
-    }
+ //   public int convert_from_cash_to_miles() {
+ //       return (int) (cashValue/0.0035);
+ //   }
 
 
-    public double convert_from_miles_to_cash() {
-        return (Math.round((milesValue * 0.0035)*100.0)/100.0);
-    }
+ //   public double convert_from_miles_to_cash() {
+ //       return (Math.round((milesValue * 0.0035)*100.0)/100.0);
+ //   }
 
 
     @Override
