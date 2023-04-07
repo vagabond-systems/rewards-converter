@@ -1,27 +1,32 @@
 public class RewardValue {
-    private double cashValue;
-    private double milesValue;
-    private static final double MILES_TO_CASH_RATE = 0.0035;
+    public double cashValue;
+
+    public static final double MILES_TO_CASH_RATE = 0.0035;
+
+    // Constructors
+    public RewardValue(int milesValue) {
+        this.cashValue = convertMilesToCash(milesValue);
+    }
 
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = cashValue / MILES_TO_CASH_RATE;
     }
 
-    public RewardValue(double milesValue, boolean isMiles) {
-        if(isMiles) {
-            this.milesValue = milesValue;
-            this.cashValue = milesValue * MILES_TO_CASH_RATE;
-        } else {
-            throw new IllegalArgumentException("Invalid constructor call: please provide miles value");
-        }
+    // conversion methods
+    private static double convertMilesToCash(int milesValue) {
+        return milesValue * MILES_TO_CASH_RATE;
     }
 
+    private static int convertCashToMiles(double cashValue) {
+        return (int) (cashValue / MILES_TO_CASH_RATE);
+    }
+
+    // getters
     public double getCashValue() {
-        return this.cashValue;
+        return cashValue;
     }
 
-    public double getMilesValue() {
-        return this.milesValue;
+    public int getMilesValue() {
+        return convertCashToMiles(this.cashValue);
     }
 }
