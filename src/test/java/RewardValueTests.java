@@ -27,8 +27,12 @@ public class RewardValueTests {
         assertEquals(expectedMilesValue, rewardValue.getMilesValue());
     }
 
+    // Verifies the conversion from miles to cash in the RewardValue instance
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        int milesValue = 10000;
+        double expectedCashValue = milesValue * RewardValue.MILES_TO_CASH_CONVERSION_RATE;
+        var rewardValue = new RewardValue(milesValue);
+        assertEquals(expectedCashValue, rewardValue.getCashValue());
     }
 }
