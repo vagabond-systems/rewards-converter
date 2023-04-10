@@ -22,4 +22,14 @@ public class RewardValue {
     private static double milesToCash(int milesValue) {
         return milesValue * MILES_TO_CASH_CONVERSION_RATE;
     }
+
+    // Returns the cash value of the RewardValue
+    public double getCashValue() {
+        return cashValue;
+    }
+
+    // Returns the miles value of the RewardValue by converting the cash value to miles
+    public int getMilesValue() {
+        return cashToMiles(this.cashValue);
+    }
 }
