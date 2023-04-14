@@ -26,14 +26,31 @@ public class RewardValue {
      * @return A double value of the cash value associated with a particular mile or the original cash value.
      */
     public double getCashValue(){
-        return mile == 0 ? cash : (double) Math.round(mile * MILES_TO_CASH_CONVERSION_RATE * 100) / 100;
+        return mile == 0 ? cash : convertToCash(mile);
     }
 
     /** Gets the mile value associated with a particular cash value.
      * @return An int value of the mile value associated with a particular cash value or the original mile value.
      */
     public int getMilesValue(){
-        return cash == 0 ? mile : (int) Math.ceil((int) Math.round(cash / MILES_TO_CASH_CONVERSION_RATE));
+        return cash == 0 ? mile : convertToMiles(cash);
     }
 
+    /** Convert mile value to cash value
+     *
+     * @param mile The mile value to be converted.
+     * @return The cash value after conversion of type double.
+     */
+    private double convertToCash(int mile){
+        return (double) Math.round(mile * MILES_TO_CASH_CONVERSION_RATE * 100) / 100;
+    }
+
+    /** Convert cash value to miles value
+     *
+     * @param cash The cash value to be converted.
+     * @return The miles value after conversion of type int.
+     */
+    private int convertToMiles(double cash){
+        return (int) Math.ceil((int) Math.round(cash / MILES_TO_CASH_CONVERSION_RATE));
+    }
 }
