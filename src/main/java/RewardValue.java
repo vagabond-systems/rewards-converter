@@ -1,13 +1,15 @@
 public class RewardValue {
     private double cashValue;
-    private double milesValue;
+    private int milesValue;
 
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = cashValue / 0.0035;
+        this.milesValue = (int) (cashValue / 0.0035);
     }
-
-    public RewardValue(double milesValue, boolean isMiles){
+    
+    //It's not possible to have multiple constructors with the same signature.
+    //Although airline miles could be a type of currency, I had to use them as a value of type "int".
+    public RewardValue(int milesValue){
         this.milesValue = milesValue;
         this.cashValue = cashValue * 0.0035;
     }
@@ -16,7 +18,7 @@ public class RewardValue {
         return cashValue;
     }
 
-    public double getMilesValue() {
+    public int getMilesValue() {
         return milesValue;
     }
 }
