@@ -1,5 +1,5 @@
 public class RewardValue {
-    private double coververdion_rate=0.0035;
+    private final double coververdion_rate=0.0035;
     double cash;
     int miles;
 
