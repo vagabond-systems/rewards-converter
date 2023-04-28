@@ -1,16 +1,16 @@
 public class RewardValue {
-
+    private double coververdion_rate=0.0035;
     double cash;
     int miles;
 
     public RewardValue(double cash) {
         this.cash = cash;
-        this.miles= (int)(cash/ 0.0035);
+        this.miles= (int)(cash/ coververdion_rate);
     }
 
     public RewardValue(int miles) {
         this.miles = miles;
-        this.cash= miles*0.0035;
+        this.cash= miles*coververdion_rate;
 
     }
 
