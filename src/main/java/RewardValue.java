@@ -7,6 +7,9 @@ public class RewardValue {
     public RewardValue(int milesVal){
         miles = milesVal;
         cash = miles * 0.0035;
+        cash = cash * 100;
+        cash = Math.round(cash);
+        cash = cash /100;
     }
 
     public RewardValue(double cashVal){
