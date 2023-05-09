@@ -20,7 +20,7 @@ public class RewardValue {
     }
     public int getMilesValue() {
         return milesValue;
-    }
+    } 
 
 
 }
