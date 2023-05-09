@@ -1,7 +1,7 @@
 public class RewardValue {
 
     private double cash;
-    private static final double CONVERSION_RATE = 0.0035;
+    public static final double CONVERSION_RATE = 0.0035;
 
     public RewardValue(double cash) {
         this.cash = cash;
