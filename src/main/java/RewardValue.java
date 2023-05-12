@@ -1,7 +1,7 @@
 public class RewardValue {
 
     private final double cash;
-    private final double MILE_TO_CASH_RATE = 0.0035;
+    public static final double MILE_TO_CASH_RATE = 0.0035;
 
     public RewardValue(double cash) {
         this.cash = cash;
