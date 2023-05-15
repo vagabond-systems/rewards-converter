@@ -1,16 +1,13 @@
 public class RewardValue {
     private double rate = 0.0035;
-    private double _miles;
     private double _cash;
 
     public RewardValue(double cash) {
         _cash = cash;
-        _miles = (_cash / rate);
     }
 
     public RewardValue(int miles) {
-        _miles = miles;
-        _cash = _miles * 0.0035;
+        _cash = miles * rate;
     }
 
     public double getCashValue() {
@@ -18,6 +15,6 @@ public class RewardValue {
     }
 
     public int getMilesValue() {
-        return (int)_miles;
+        return (int)(_cash / rate);
     }
 }
