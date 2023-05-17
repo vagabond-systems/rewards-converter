@@ -16,7 +16,6 @@ public class RewardValue {
     }
 
     public double getMilesValue(){
-        milesValue = getCashValue() * miles_to_cash_rate;
         return milesValue;
     }
 }
