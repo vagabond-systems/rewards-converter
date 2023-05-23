@@ -7,6 +7,7 @@ public class RewardValue {
         this.conversionRate = 0.0035;
     }
 
+
     public double getCashValue() {
         return cashValue;
     }

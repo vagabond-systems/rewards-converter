@@ -32,4 +32,5 @@ public class RewardValueTests {
         double expectedCashValue = milesValue;
         assertEquals(expectedCashValue, rewardValue.getCashValue());
     }
+
 }
