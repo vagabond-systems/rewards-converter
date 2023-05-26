@@ -1,28 +1,24 @@
 import java.util.Scanner;
 
 public class RewardsConverter {
-    public class RewardValue {
-        private double cashValue;
-        private double milesValue;
     
-        // Constructor that accepts a cash value
+    public static class RewardValue {
+        private double cashValue;
+        
         public RewardValue(double cashValue) {
             this.cashValue = cashValue;
-            this.milesValue = cashValue / 0.0035;
         }
-    
-        // Constructor that accepts a value in miles
-        public RewardValue(int milesValue) {
-            this.milesValue = milesValue;
-            this.cashValue = milesValue * 0.0035;
+        
+        public RewardValue(int miles) {
+            this.cashValue = miles * 0.0035;
         }
-    
+        
         public double getCashValue() {
             return cashValue;
         }
-    
-        public double getMilesValue() {
-            return milesValue;
+        
+        public int getMilesValue() {
+            return (int) (cashValue / 0.0035);
         }
     }
     
@@ -38,9 +34,8 @@ public class RewardsConverter {
             System.out.println("Could not parse input value as a double, exiting");
             return;
         }
-        System.out.println("converting $" + input_value + " to miles");
+        System.out.println("Converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
     }
-    
 }
