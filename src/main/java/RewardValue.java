@@ -1,6 +1,6 @@
 public class RewardValue {
-    private double cashValue;
-    private double milesValue;
+    private static double cashValue;
+    private static double milesValue;
 
     // Constructor that accepts a cash value
     public RewardValue(double cashValue) {
@@ -19,5 +19,15 @@ public class RewardValue {
 
     public double getMilesValue() {
         return milesValue;
+    }
+
+    public static double getconvertcashtomiles(double cashvalue){
+        // double milesValue = 
+          return cashValue / 0.0035; 
+    }
+
+    public static double getconvertmilestocash(double milesValue){
+        double cashValue = milesValue * 0.0035;
+          return cashValue;
     }
 }
