@@ -10,7 +10,7 @@ public class RewardsConverter {
         try {
             cashValue = Double.parseDouble(input_value);
         } catch (NumberFormatException exception) {
-            System.out.println("Could not parse input value as a double, exiting");
+            System.out.println("Could not parse inpt value as a double, exiting");
             return;
         }
         System.out.println("converting $" + input_value + " to miles");
