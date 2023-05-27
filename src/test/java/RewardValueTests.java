@@ -19,9 +19,7 @@ public class RewardValueTests {
     }
 
     @Test
-    void convert_from_cash_to_miles() {
-        assert false;
-    }
+    void convert_from_cash_to_miles() { assert false; }
 
     @Test
     void convert_from_miles_to_cash() {
