@@ -6,7 +6,7 @@ class RewardValue{
         miles=cashValue2*0.0035;
     }
 
-    public int getCashvalue() {
+    public int getCashValue() {
         return cashvalue;
     }
     public double getMilesValue() {
