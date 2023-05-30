@@ -13,7 +13,7 @@ public class RewardValue
     public RewardValue(int mi)
     {
         m = mi;
-        c = m/0.0035;
+        c = (int) (m/0.0035);
     }
 
     public double getCashValue()
