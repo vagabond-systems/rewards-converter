@@ -1,4 +1,3 @@
-
 public class RewardValue {
     private Double cashValue;
     private double mileValue;
