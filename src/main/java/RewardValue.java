@@ -7,7 +7,7 @@ public class RewardValue
     public RewardValue(double dollar)
     {
         c = dollar;
-        m = int(0.0035*c);
+        m = (int) (0.0035*c);
     }
 
     public RewardValue(int mi)
