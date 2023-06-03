@@ -21,6 +21,7 @@ public class RewardsConverter {
 }
 
 class RewardValue {
+    public static double MILES_TO_CASH_CONVERSION_RATE;
     private double cashValue;
     private double milesValue;
     private static final double CONVERSION_RATE = 0.0035;
