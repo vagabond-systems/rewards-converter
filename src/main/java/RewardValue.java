@@ -1,22 +1,19 @@
-import java.math.BigDecimal;
-
 public class RewardValue {
-    private BigDecimal cash;
-    private double miles;
+    private double cash;
+    private int miles;
 
-    public RewardValue(BigDecimal cash) {
+    public RewardValue(double cash){
         this.cash = cash;
     }
-
-    public RewardValue(double miles){
+    public RewardValue(int miles){
         this.miles = miles;
     }
 
-    public double getMilesValue(){
-        return 0;
+    public double getCashValue(){
+        return this.cash;
     }
 
-    public BigDecimal getCashValue(){
-        return null;
+    public double getMilesValue(){
+        return getCashValue()* 0.0035;
     }
 }
