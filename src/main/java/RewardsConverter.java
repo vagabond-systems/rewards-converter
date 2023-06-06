@@ -15,6 +15,9 @@ public class RewardsConverter {
         }
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
-        System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        double miles = rewardsValue.convertFromCashToMiles();
+        // Adding formatting to show 3 decimal places so as not to change the rounding on the back end.
+        String formattedMiles = String.format("%.3f", miles);
+        System.out.println("$" + input_value + " is worth " + formattedMiles + " miles");
     }
 }
