@@ -18,6 +18,7 @@ public class RewardValue {
         return miles;
     }
 
+
     public double convertFromCashToMiles() {
         return miles = getCashValue() * 0.0035;
     }
@@ -25,4 +26,5 @@ public class RewardValue {
     public double convertFromMilesToCash() {
         return cash = getMilesValue() / 0.0035;
     }
+
 }

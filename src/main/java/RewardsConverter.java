@@ -16,6 +16,7 @@ public class RewardsConverter {
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
         double miles = rewardsValue.convertFromCashToMiles();
-        System.out.println("$" + input_value + " is worth " + miles + " miles");
+        String formattedMiles = String.format("%.3f", miles);
+        System.out.println("$" + input_value + " is worth " + formattedMiles + " miles");
     }
 }
