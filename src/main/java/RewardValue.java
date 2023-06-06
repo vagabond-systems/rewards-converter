@@ -1,5 +1,5 @@
 public class RewardValue {
-    private final static double MILES_TO_CASH_EXCHANGE_RATE = 0.0035;
+    public static final double MILES_TO_CASH_EXCHANGE_RATE = 0.0035;
     private final double cashValue;
     private final int milesValue;
 
@@ -22,10 +22,6 @@ public class RewardValue {
     }
 }
 
-
-
-
-
-
-
-// constuctor overloading in Java
+/*Although this is the asked way to calculate the reward value. Before knowing what datatypes that cashValue and milesValue were.
+I wanted to approach it with different classes for each the milesValue and cashValue, and rewardValue. So there wouldn't be any conversions needed between the two classes and the constructors.
+*/
