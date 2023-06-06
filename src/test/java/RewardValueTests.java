@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RewardValueTests {
+    private static final double DELTA = 1e-15;
 
     @Test
     void create_with_cash_value() {
@@ -20,11 +21,16 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        RewardValue reward = new RewardValue(100.0);
+        double expectedMiles = 100.0 / RewardValue.CONVERSION_RATE;
+        assertEquals(expectedMiles, reward.getMilesValue(), DELTA);
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        RewardValue reward = new RewardValue(1000);
+        double expectedCash = 1000 * RewardValue.CONVERSION_RATE;
+        assertEquals(expectedCash, reward.getCashValue(), DELTA);
     }
+
 }
