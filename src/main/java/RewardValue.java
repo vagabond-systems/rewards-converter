@@ -14,20 +14,23 @@ public class RewardValue {
         this.miles = miles;
     }
 
+
     public double getCashValue(){
+        return cashValue;
+    }
+
+    public double convertFromMilesToCash(){
         double rate = miles * 100;
         double product = rate * .35;
         double difference = rate - product;
-        //double result = rate - difference;
 
-        System.out.println("This is rate: " + rate);
-        System.out.println("This is product: " + product);
-        System.out.println("This is difference: " + difference);
-        //System.out.println("This is result: " + result);
+//        System.out.println("This is rate: " + rate);
+//        System.out.println("This is product: " + product);
+//        System.out.println("This is difference: " + difference);
 
         BigDecimal bd = new BigDecimal(String.valueOf(difference));
         bd.setScale(2, RoundingMode.HALF_UP);
-        System.out.println("This is BD: " + bd.doubleValue());
+        //System.out.println("This is BD: " + bd.doubleValue());
         return bd.doubleValue();
     }
 
@@ -36,6 +39,10 @@ public class RewardValue {
     }
 
     public double getMilesValue(){
+        return miles;
+    }
+
+    public double convertFromCashToMiles(){
         double product = cashValue * 0.35;
         double sum = cashValue + product;
         double result = sum / 100;
