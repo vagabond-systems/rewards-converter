@@ -14,7 +14,7 @@ public class RewardsConverter {
             return;
         }
         System.out.println("converting $" + input_value + " to miles");
-        var rewardsValue = new RewardValue(cashValue);
-        System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        var rewardValue = new RewardValue(cashValue);
+        System.out.println("$" + input_value + " is worth " + rewardValue.getMilesValue() + " miles");
     }
 }
