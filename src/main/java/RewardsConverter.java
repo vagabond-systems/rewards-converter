@@ -19,6 +19,6 @@ public class RewardsConverter {
         System.out.println("$" + input_value + " is worth " + rewardsValue.convertFromCashToMiles() + " miles");
         rewardsValue.setMilesValue(rewardsValue.convertFromCashToMiles());
         System.out.println("converting " + rewardsValue.getMilesValue() + " to cash");
-        System.out.println("Your cash rewards value for " + rewardsValue.getMilesValue() + " miles are: " + rewardsValue.convertFromMilesToCash() );
+        System.out.println("Your cash rewards value for " + rewardsValue.getMilesValue() + " miles is: $" + rewardsValue.convertFromMilesToCash() );
     }
 }
