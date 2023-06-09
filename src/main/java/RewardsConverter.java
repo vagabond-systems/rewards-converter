@@ -7,7 +7,6 @@ public class RewardsConverter {
         System.out.println("Please enter a cash value to convert to airline miles: ");
         var input_value = scanner.nextLine();
         double cashValue;
-        int milesValue = 282;
         try {
             cashValue = Double.parseDouble(input_value);
         } catch (NumberFormatException exception) {
@@ -16,19 +15,10 @@ public class RewardsConverter {
         }
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
-        //rewardsValue.setCashValue(cashValue);
-        //System.out.println("$" + input_value + " is worth " + rewardsValue.convertFromCashToMiles() + " miles");
-
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
         System.out.println("___________________________________");
-        //rewardsValue.setMilesValue(rewardsValue.convertFromCashToMiles());
         System.out.println("converting " + rewardsValue.getMilesValue() + " miles to cash");
         System.out.println("Your cash rewards value for " + rewardsValue.getMilesValue() + " miles is: $" + rewardsValue.getCashValue() );
-
-        System.out.println("___________________________");
-        var tester = new RewardValue(milesValue);
-       System.out.println(tester.getMilesValue());
-        System.out.println(tester.getCashValue());
 
     }
 }
