@@ -20,16 +20,18 @@ public class RewardValue {
         if ( miles == 0){
             return cashValue;
         }
+        System.out.println("This is decimal: " + decimal);
         if (decimal == null){
             BigDecimal temp = BigDecimal.valueOf(0.0);
             setDecimal(temp);
-
+            System.out.println("This is decimal: " + decimal);
             double rate =  .35;
             double product = (miles + decimal.doubleValue()) * rate;
 
             BigDecimal bd = BigDecimal.valueOf(product);
             bd = bd.setScale(2, RoundingMode.HALF_UP);
             setCashValue(bd.doubleValue());
+            System.out.println("This is cashValue: " + bd.doubleValue());
             return bd.doubleValue();
         } else {
             double rate =  .35;
