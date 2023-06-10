@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rewards-converter-flow/rewards-converter.iml" filepath="$PROJECT_DIR$/rewards-converter-flow/rewards-converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rewards-converter-flow.iml" filepath="$PROJECT_DIR$/.idea/rewards-converter-flow.iml" />
+    </modules>
+  </component>
+</project>
