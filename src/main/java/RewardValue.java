@@ -5,7 +5,7 @@ public class RewardValue {
 
     /** If miles are converted to cash at 0.0035, 1 mile = $0.0035.
      * Although class is not completely immutable,
-     * private setters are applied to keep data from being manipulated **/
+     * private setters are applied to keep data from being manipulated. **/
 
     private double cashValue;
     private int miles;
