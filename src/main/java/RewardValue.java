@@ -11,11 +11,12 @@ public class RewardValue {
     }
 
     public double getCashValue() {
-        return cashValue;
+        double cashToMilesRate = 0.0035;
+        return this.milesValue * cashToMilesRate;
     }
 
     public double getMilesValue() {
         double milesToCashRate =  0.0035;
-        return this.cashValue *  milesToCashRate;
+        return this.cashValue * milesToCashRate;
     }
 }
