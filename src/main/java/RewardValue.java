@@ -7,7 +7,6 @@ public class RewardValue{
     public RewardValue(double cash){
         this.cash = cash;
     }
-
     //Accessor Methods
     public double getCashValue(){
         return this.cash;
@@ -15,11 +14,5 @@ public class RewardValue{
     public double getMilesValue(){
         return this.cash * .0035;
     }
-
-
-
-
-
 }
-
 
