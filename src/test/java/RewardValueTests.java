@@ -37,6 +37,17 @@ public class RewardValueTests {
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        //Arrange
+        double numberOfMiles = 10000;
+        RewardValue rewardValue = new RewardValue(numberOfMiles);
+        double conversionRate = rewardValue.getCONVERT_RATE();
+
+        //Act
+        int convertedCash = (int) (numberOfMiles *  conversionRate);
+        double result = rewardValue.convertMilesToCash((int) numberOfMiles);
+
+        //Assert
+        Assertions.assertEquals(convertedCash, result);
+
     }
 }
