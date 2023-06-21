@@ -13,10 +13,6 @@ public class RewardValue {
         this.milesValue = milesValue;
     }
 
-    public RewardValue() {
-
-    }
-
 
     //Getters
 
