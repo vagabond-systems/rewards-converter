@@ -35,7 +35,7 @@ public class RewardValue {
         return (int) milesNumber;
     }
 
-    public double convertMilesToCash(){
+    public double convertMilesToCash(int milesValue){
 
         double cashNumber = milesValue * CONVERT_RATE;
 
