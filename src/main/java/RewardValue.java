@@ -13,13 +13,23 @@ public class RewardValue {
     }
 
     public double getCashValue() {
-        cashValue = milesValue * exchangeRate;
         return cashValue;
     }
 
     public int getMilesValue() {
-        milesValue = (int)(cashValue / exchangeRate);
         return milesValue;
+    }
+
+    public int cashToMilesConverter(double cashValue){
+        int milesConverted;
+        milesConverted = (int)(cashValue / exchangeRate);
+        return milesConverted;
+    }
+
+    public double milesToCashConverter(int miles){
+        double cashConverted;
+        cashConverted = miles * exchangeRate;
+        return cashConverted;
     }
 
 
