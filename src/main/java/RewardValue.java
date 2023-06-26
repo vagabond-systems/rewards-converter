@@ -10,8 +10,8 @@ public class RewardValue {
 
     public RewardValue(int miles)
     {
-        // creates constructor to accept miles value as type 'int'
-        this.milesValue = miles;
+        // creates constructor to accept miles value as type 'int', converts to cash.
+        this.cashValue = miles * 0.0035;
     }
 
     public double getCashValue()
@@ -22,7 +22,7 @@ public class RewardValue {
 
     public int getMilesValue()
     {
-        // converts a give cash value to a mile value at a rate of 1:285.714, returns a mile value of type 'int' (typecast)
+        // converts a give cash value to a mile value at a rate of 1:285.714, returns a mile value of type 'int' (type casting)
         milesValue = (int) (cashValue / 0.0035);
         return milesValue;
     }
