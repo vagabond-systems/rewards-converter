@@ -1,4 +1,9 @@
 public class RewardValue {
+
+    // Is this conversion value correct? Seems like a ridiculous Conversion Rate
+    // $1000 -> 285,714 miles
+    // 1000 miles -> $3.5
+    
     private final double CASH_TO_MILES_CONVERSION_RATE = 0.0035;
     private double cashValue;
     private int miles;
@@ -13,7 +18,7 @@ public class RewardValue {
         this.cashValue = miles * CASH_TO_MILES_CONVERSION_RATE;
     }
 
-    public Double getCashValue() {
+    public double getCashValue() {
         return cashValue;
     }
 
