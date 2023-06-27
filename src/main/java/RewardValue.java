@@ -6,7 +6,6 @@ public class RewardValue {
 
     public RewardValue(double cash) {
         this.cash=cash;
-
     }
 
     public RewardValue(int miles) {
