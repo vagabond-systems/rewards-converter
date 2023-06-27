@@ -31,6 +31,5 @@ public class RewardValueTests {
         int milesValue = 10000;
         var rewardValue = new RewardValue(milesValue);
         assertEquals(milesValue * MILES_TO_CASH_CONVERSION_RATE, rewardValue.convert_to_cash(milesValue));
-
     }
 }
