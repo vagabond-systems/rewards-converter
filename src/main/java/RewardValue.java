@@ -1,20 +1,28 @@
 public class RewardValue {
-    double cash;
-    int miles;
-    RewardValue(double cash){
-        this.cash = cash;
+    private final double cashValue;
+    public static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
+
+    public RewardValue(double cashValue) {
+        this.cashValue = cashValue;
     }
 
-    RewardValue(int miles){
-        this.miles = miles;
+    public RewardValue(int milesValue) {
+        this.cashValue = convertToCash(milesValue);
     }
 
-    public double getCashValue(){
-        return cash;
+    public static int convertToMiles(double cashValue) {
+        return (int) (cashValue / MILES_TO_CASH_CONVERSION_RATE);
     }
 
-    public double getMilesValue(){
-        double convertedMiles = cash*.0035;
-        return convertedMiles;
+    public static double convertToCash(int milesValue) {
+        return milesValue * MILES_TO_CASH_CONVERSION_RATE;
+    }
+
+    public double getCashValue() {
+        return cashValue;
+    }
+
+    public int getMilesValue() {
+        return convertToMiles(this.cashValue);
     }
 }
