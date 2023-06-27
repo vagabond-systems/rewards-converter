@@ -4,18 +4,18 @@ public class RewardValue {
     // $1000 -> 285,714 miles
     // 1000 miles -> $3.5
     
-    private final double CASH_TO_MILES_CONVERSION_RATE = 0.0035;
+    public static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
     private double cashValue;
     private int miles;
 
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.miles = (int)(cashValue / CASH_TO_MILES_CONVERSION_RATE);
+        this.miles = (int)(cashValue / MILES_TO_CASH_CONVERSION_RATE);
     }
 
     public RewardValue(int miles) {
         this.miles = miles;
-        this.cashValue = miles * CASH_TO_MILES_CONVERSION_RATE;
+        this.cashValue = miles * MILES_TO_CASH_CONVERSION_RATE;
     }
 
     public double getCashValue() {
