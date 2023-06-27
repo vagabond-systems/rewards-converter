@@ -5,7 +5,6 @@
 Changes include:
 
 * Changing variable name, `CASH_TO_MILES_CONVERSION_RATE ` to `MILES_TO_CASH_CONVERSION_RATE`
-<br />
 * Adding `convert_from_cash_to_miles()` and `convert_from_miles_to_cash()` test cases.
 
 
