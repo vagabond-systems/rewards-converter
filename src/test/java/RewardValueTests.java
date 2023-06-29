@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,12 +20,24 @@ public class RewardValueTests {
     }
 
     @Test
-    void convert_from_cash_to_miles() {
-        assert false;
+    public void testCashToMilesConversion() {
+        double cashValue = 100.0;
+        double expectedMilesValue = cashValue / 0.0035;
+
+        RewardValue rewardValue = new RewardValue(cashValue);
+        double actualMilesValue = rewardValue.getMilesValue();
+
+        Assertions.assertEquals(expectedMilesValue, actualMilesValue, 0.0001); // Allowing a small delta for floating-point precision
     }
 
     @Test
-    void convert_from_miles_to_cash() {
-        assert false;
+    public void testMilesToCashConversion() {
+        int milesValue = 500;
+        double expectedCashValue = milesValue * 0.0035;
+
+        RewardValue rewardValue = new RewardValue(milesValue);
+        double actualCashValue = rewardValue.getCashValue();
+
+        Assertions.assertEquals(expectedCashValue, actualCashValue, 0.01); // Allowing a small delta for floating-point precision
     }
 }
