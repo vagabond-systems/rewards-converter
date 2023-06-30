@@ -1,10 +1,10 @@
-public class RewardValue {              //two constructors
-    private double cashValue;           //Accepts a cash value
-    private double milesValue;          //Accepts a value in miles
+class RewardValue {
+    private double cashValue;
+    private double milesValue;
 
     public RewardValue(double value) {
         this.cashValue = value;
-        this.milesValue = value * 0.0035;          //Convert from miles to cash
+        this.milesValue = value * 0.0035;
     }
 
     public double getCashValue() {
