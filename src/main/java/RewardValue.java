@@ -1,7 +1,7 @@
 
 public class RewardValue {
-    private double cashValue;
-    private int milesValue;
+    private final double cashValue;
+    private final int milesValue;
     //RewardValue must convert from miles to cash at a rate of 0.0035.
     private static final double rate = 0.0035;
 
