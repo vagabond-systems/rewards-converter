@@ -36,4 +36,10 @@ public class RewardValue {
     }
 
 
+    //Added new method to change miles into cash
+    public double milesToCash(){
+        return getMilesValue() * RATE;
+    }
+
+
 }
