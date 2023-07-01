@@ -1,22 +1,22 @@
-import java.math.BigDecimal;
 
 public class RewardValue {
 
     //Conversion rate for miles to cash
-    private final double CONVERSIONRATE = 0.0035;
+    private final double MilesConversionRate = 0.0035;
     private double cashValue;
 
     public RewardValue(double cash){
         this.cashValue = cash;
     }
     public RewardValue(int miles){
-        this.cashValue = miles * CONVERSIONRATE;
+        this.cashValue = miles * MilesConversionRate;
     }
     public double getCashValue(){
         return cashValue;
     }
-    public double getMilesValue(){
-        double dollarsToMiles = cashValue / CONVERSIONRATE;
+    //Constructor with miles param took miles as an int, So it should be the best return type
+    public int getMilesValue(){
+        int dollarsToMiles = (int) (cashValue / MilesConversionRate);
         return dollarsToMiles;
     }
 }
