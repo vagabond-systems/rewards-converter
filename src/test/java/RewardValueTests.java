@@ -20,11 +20,23 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+
+        //test if round up
+        int milesValue = 4286;
+        var rewardValue = new RewardValue(15.0);
+        assertEquals(milesValue,rewardValue.getMilesValue());
+
+        //test for not rounding up
+        milesValue = 2874;
+        rewardValue = new RewardValue(10.06);
+        assertEquals(milesValue,rewardValue.getMilesValue());
+
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        double cashValue = 0.042;
+        var rewardValue = new RewardValue(12);
+        assertEquals(cashValue,rewardValue.getCashValue());
     }
 }
