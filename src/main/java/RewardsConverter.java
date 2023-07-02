@@ -15,6 +15,7 @@ public class RewardsConverter {
             milesValues = input_value2;     // Sets integer mile variable to second input 
         } catch (NumberFormatException exception) {
             System.out.println("Could not parse input value as a double, or integer, exiting");
+            scanner.close();
             return;
         }
         System.out.println("converting $" + input_value + " to miles");
@@ -25,6 +26,6 @@ public class RewardsConverter {
         System.out.println("converting " + input_value2 + " miles to cash");
         var rewardsValue2 = new RewardValue(milesValues); 
         System.out.println(input_value2 + " miles is worth $" + rewardsValue2.getCashValue());
-        
+        scanner.close();
     }
 }
