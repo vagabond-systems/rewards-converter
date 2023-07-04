@@ -1,24 +1,29 @@
 public class RewardValue {
 
+    // attributes
+    double cash;
+    int miles;
     // constructors
-    public RewardValue(decimal inputCash){
-        decimal cash = inputCash;
+    public RewardValue(double inputCash){
+         cash = inputCash;
     }
 
     public RewardValue(int inputMiles){
-        int miles = inputMiles;
+         miles = inputMiles;
     }
 
     // methods
 
-    public decimal getCashValue( int miles){
-       final decimal conversion_rate = .0035;
+    public double getCashValue(){
+       final double conversion_rate = .0035;
 
-       return (decimal)miles * conversion_rate;
+       return (double)miles * conversion_rate;
     };
 
     public int getMileValue(){
-        return mileValue * miles;
-    }
+        final double conversation_rate = .0035;
+
+        return (int) (cash / conversation_rate);
+    };
 
 }
