@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RewardValueTests {
 
+
     @Test
     void create_with_cash_value() {
         double cashValue = 100;
@@ -20,11 +21,17 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        double cashToConvert = 205.00;
+        RewardValue rewardValue = new RewardValue(cashToConvert);
+        double returnedMilesValue = rewardValue.getMilesValue();
+        assertEquals(0.72, returnedMilesValue);
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        int milesToConvert = 2;
+        RewardValue rewardValue = new RewardValue(milesToConvert);
+        double returnedCashValue = rewardValue.getCashValue();
+        assertEquals(571.43, returnedCashValue);
     }
 }
