@@ -1,13 +1,18 @@
 public class RewardValue {
-    double cashValue;
-    int mileValue;
 
-    public RewardValue(double cash){
+    // attributes
+    BigDecimal cashValue;
+    double mileValue;
+
+    // constructors
+    public RewardValue(BigDecimal cash){
         cashValue = cash;
     }
 
-    public RewardValue(int miles){
-        int mileValue = miles;
+    public RewardValue(double miles){
+        mileValue = miles;
     }
+
+    // methods
 
 }
