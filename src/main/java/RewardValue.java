@@ -20,7 +20,7 @@ public class RewardValue {
        return (double)miles * conversion_rate;
     };
 
-    public int getMileValue(){
+    public int getMilesValue(){
         final double conversation_rate = .0035;
 
         return (int) (cash / conversation_rate);
