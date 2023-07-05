@@ -1,0 +1,8 @@
+{
+    "java.test.config": {
+      "workingDirectory": "${workspaceFolder}",
+      "testFramework": "junit",
+      "testRunner": "gradle"
+    }
+  }
+  
