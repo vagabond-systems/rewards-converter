@@ -10,12 +10,7 @@ public class RewardValue {
         this.miles = miles;
     }
 
-    public double getCashValue() {
-        if (this.miles != 0) {
-            return this.miles / .0035;
-        }
-        return this.cash;
-    }
+
 
     public double getMilesValue() {
         if (this.cash != 0) {
@@ -23,4 +18,12 @@ public class RewardValue {
         }
         return this.miles;
     }
+
+    public double getCashValue() {
+        if (this.miles != 0) {
+            return this.miles / .0035;
+        }
+        return this.cash;
+    }
+
 }
