@@ -20,6 +20,7 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
+        double cashValue = 100;
         assert false;
     }
 
