@@ -1,7 +1,8 @@
 public class RewardValue {
     
     //button to toggle for input for miles or cash.
-
+// Originially I was going to have another class to convert foreign currency to the american dollar. 
+//But then I realized, that's going 110% and the focus should be getting the basics down instead of polishing. 
      double ConversionRate = 0.0035;
       private double milesConverted;
       private double cashConverted;
@@ -9,13 +10,13 @@ public class RewardValue {
      public RewardValue(double cashConverted)
     {
         this.cashConverted = cashConverted;
-         milesConverted = cashConverted * ConversionRate;
+         milesConverted = cashConverted / ConversionRate;
     }
     //Constructor that accepts value in miles.
     public RewardValue(int milesConverted)
     {
         this.milesConverted = milesConverted;
-    cashConverted = milesConverted / 0.0035;
+    cashConverted = milesConverted * ConversionRate;
     }
    // constructor that accepts value in cash
 
