@@ -1,4 +1,4 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 // RewardValue must have two constructors: one that accepts a cash value and one that accepts a value in miles.
 // RewardValue must have a getCashValue() method, which returns the cash value of the RewardValue.
@@ -10,9 +10,10 @@ public class RewardValue {
     private int milesValue;
     private static final double MILES_TO_CASH_RATE = 0.0035;
 
-    // public static double getMilesToCashRate() {
-    // return MILES_TO_CASH_RATE;
-    // } // Added a getter method for the MILES_TO_CASH_RATE field in the RewardValue class to getting access to MILES_TO_CASH_RATE in test
+    // Added a getter method for the MILES_TO_CASH_RATE field in the RewardValue class to getting access to MILES_TO_CASH_RATE in test
+    public static double getMilesToCashRate() {
+    return MILES_TO_CASH_RATE;
+    } 
 
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
