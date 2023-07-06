@@ -3,24 +3,30 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 public class RewardValue {
-    private float milesValue;
+    private int milesValue;
     private double cashValue;
-
-    public RewardValue(float milesValue) {
-        this.milesValue = milesValue;
-        this.cashValue = milesValue / 0.0035;
-    }
 
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = (float) (cashValue * 0.0035);
+    }
+
+    public RewardValue(int milesValue) {
+        this.cashValue = convertToCash(milesValue);
+    }
+
+    public int convertToMiles(double cashValue) {
+        return (int) (cashValue / 0.0035);
+    }
+
+    public double convertToCash(int milesValue) {
+        return milesValue * 0.0035;
     }
 
     public double getCashValue() {
         return cashValue;
     }
 
-    public double getMilesValue() {
-        return milesValue;
+    public int getMilesValue() {
+        return convertToMiles(this.cashValue);
     }
 }
