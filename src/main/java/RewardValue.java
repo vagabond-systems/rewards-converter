@@ -1,9 +1,5 @@
-//import java.math.BigDecimal;
-
 public class RewardValue {
-  //  This is just an example there's a lot more information required to properly complete this.
-  double conversionRate = 0.0035;
-  double valueInCash;
+    double conversionRate = 0.0035;
     double valuePoints;
     int valueMiles;
     public RewardValue(double cash) {
@@ -11,14 +7,16 @@ public class RewardValue {
     }
     public RewardValue(int miles){
         this.valueMiles =  miles;
+        this.valuePoints = miles / conversionRate;
+
       System.out.println(miles);
     }
     public double getCashValue(){
 
-      return valuePoints * 100;
+      return valuePoints ;
     }
     public double getMilesValue(){
 
-      return getCashValue()*conversionRate ;
+      return valueMiles ;
     }
 }
