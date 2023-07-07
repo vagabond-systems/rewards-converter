@@ -1,9 +1,18 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+/*
+ * This seems to be a test file to create classes to use for the rewards converter. 
+ * Not entirely sure why this is here as git branches exist but i imagine
+ * it makes things more organized for some.
+ */
+
 
 public class RewardValueTests {
 
+    //essentailly the reward value equals what the cashvalue equals after calculation
+    // of the rewards. So it puts the cash value inside of an equation, and 
+    //vice versa for create with miles value.
     @Test
     void create_with_cash_value() {
         double cashValue = 100;
@@ -20,11 +29,20 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        double expectedMileValue = 1000;
+        double cashvalue = 3.5;
+        //console.output
+        
+        var finalValue = new RewardValue(cashvalue);
+        //var rewardValue = new RewardValue()
+        assertEquals(expectedMileValue, finalValue.getMilesValue());      
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        double expectedCashValue = 1.75;
+        int milesValue = 500;
+        var finalValue = new RewardValue(milesValue);
+        assertEquals(expectedCashValue, finalValue.getCashValue());
     }
 }
