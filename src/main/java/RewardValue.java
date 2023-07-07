@@ -2,19 +2,23 @@
 
 public class RewardValue {
   //  This is just an example there's a lot more information required to properly complete this.
-    double valueInCash;
+  double conversionRate = 0.0035;
+  double valueInCash;
     double valuePoints;
-    double valueMiles;
+    int valueMiles;
     public RewardValue(double cash) {
-        this.valuePoints = cash * 10;
+        this.valuePoints = cash;
     }
     public RewardValue(int miles){
-        this.valueMiles =  miles * 2;
+        this.valueMiles =  miles;
+      System.out.println(miles);
     }
     public double getCashValue(){
-    return valuePoints;
+
+      return valuePoints * 100;
     }
     public double getMilesValue(){
-        return 0.00;
+
+      return getCashValue()*conversionRate ;
     }
 }
