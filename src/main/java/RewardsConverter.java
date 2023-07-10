@@ -11,10 +11,29 @@ public class RewardsConverter {
             cashValue = Double.parseDouble(input_value);
         } catch (NumberFormatException exception) {
             System.out.println("Could not parse input value as a double, exiting");
+            scanner.close();
             return;
         }
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        scanner.close();
+    }
+}
+
+class RewardValue{
+    private double cashValue;
+    final double RATE = 0.0035;
+    public RewardValue(double cashValue){
+        this.cashValue= cashValue;
+    }
+    public RewardValue(int miles) {
+        this.cashValue = miles * RATE;
+    }
+    public double getCashValue() {
+        return this.cashValue;
+    }
+    public int getMilesValue(){
+        return (int) (cashValue/RATE);
     }
 }
