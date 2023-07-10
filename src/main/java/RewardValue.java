@@ -13,7 +13,10 @@ public class RewardValue {
 
 
     private static double convertToCash(int milesValue) {
-        return milesValue * 0.0035;
+        double result = milesValue * 0.0035;
+        double roundResult = (double) Math.round(result * 100) / 100;
+
+        return roundResult;
     }
 
     private static int convertToMiles(double cashValue) {
