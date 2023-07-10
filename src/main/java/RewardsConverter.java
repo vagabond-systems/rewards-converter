@@ -21,17 +21,17 @@ public class RewardsConverter {
 
 class RewardValue{
     private double cashValue;
-    int miles;
+    final double RATE = 0.0035;
     public RewardValue(double cashValue){
         this.cashValue= cashValue;
     }
     public RewardValue(int miles) {
-        this.miles = miles;
+        this.cashValue = miles * RATE;
     }
     public double getCashValue() {
         return this.cashValue;
     }
-    public double getMilesValue(){
-        return this.miles * 0.0035;
+    public int getMilesValue(){
+        return (int) (cashValue/RATE);
     }
 }
