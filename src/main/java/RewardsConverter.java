@@ -1,4 +1,23 @@
 import java.util.Scanner;
+class RewardValue {
+
+    public double cash;
+    public int miles;
+    public RewardValue(int miles){
+        this.miles=miles;
+    }
+    public RewardValue(double cash){
+        this.cash=cash;
+    }
+    public double getCashValue(){
+
+        return (double)miles*0.0035;
+    }
+    public int getMilesValue(){
+        double ans=cash/0.0035;
+        return (int)ans;
+    }
+}
 
 public class RewardsConverter {
     public static void main(String[] args) {
