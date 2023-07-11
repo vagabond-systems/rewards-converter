@@ -2,7 +2,7 @@
 
 public class RewardValue {
     private final double cashValue;
-    private static final double MILES_TO_CASH_CONVERSION_RATE =0.0035;
+    public static final double MILES_TO_CASH_CONVERSION_RATE =0.0035;
 
 
     // Constructor accepting CashValue
@@ -27,7 +27,7 @@ public class RewardValue {
         return cashValue;
     }
 
-    public double getMilesValue() {
+    public int getMilesValue() {
         return convertToMiles(this.cashValue);
     }
 
