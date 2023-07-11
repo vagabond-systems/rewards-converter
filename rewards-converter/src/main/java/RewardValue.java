@@ -1,4 +1,4 @@
-// creating the class of the RewardConverter
+// creating the class of the RewardConverter with improving code 
 
 public class RewardValue {
     private final double cashValue;
