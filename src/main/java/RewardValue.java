@@ -1,22 +1,23 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class RewardValue {
 
-    //Variable declaration
     private int miles;
-    private double cash;
-    private final double CONVERSION_RATE = 0.0035;
+    private BigDecimal cash;
+    private final BigDecimal CONVERSION_RATE = new BigDecimal("0.0035");
 
-    public RewardValue(double cash) {
+    public RewardValue(BigDecimal cash) {
         this.cash = cash;
-        this.miles = (int) (cash / CONVERSION_RATE);
+        this.miles = cash.divide(CONVERSION_RATE, 0, BigDecimal.ROUND_DOWN).intValue();
     }
 
     public RewardValue(int miles) {
         this.miles = miles;
-        this.cash = miles * CONVERSION_RATE;
+        this.cash = new BigDecimal(miles).multiply(CONVERSION_RATE).setScale(2, RoundingMode.HALF_UP);
     }
 
-    public double getCashValue() {
+    public BigDecimal getCashValue() {
         return cash;
     }
 
