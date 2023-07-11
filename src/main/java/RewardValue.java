@@ -7,15 +7,9 @@ public class RewardValue {
         this.milesValue = cashValue / 0.0035;
     }
 
-    public RewardValue(double milesValue, boolean convertToCash) {
-        if (convertToCash) {
-            this.cashValue = milesValue * 0.0035;
-            this.milesValue = milesValue;
-        }
-        else {
-            this.cashValue = 0;
-            this.milesValue = milesValue;
-        }
+    public RewardValue(int milesValue) {
+        this.milesValue = milesValue;
+        this.cashValue = milesValue * 0.0035;
     }
 
     public double getCashValue() {
