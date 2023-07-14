@@ -13,7 +13,12 @@ public class RewardValue {
             this.milesValue = milesValue;
             this.cashValue = milesValue * 0.0035;
         }
-
+    public double convertCashToMiles(double cashAmount, double conversionRate) {
+        return cashAmount / conversionRate;
+    }
+    public double convertMilesToCash(double milesAmount, double conversionRate) {
+        return milesAmount * conversionRate;
+    }
         // Method to get the cash value of the RewardValue
         public double getCashValue() {
             return cashValue;
