@@ -25,4 +25,9 @@ public class RewardValue {
         return convertedMilesToCash;
     }
 
+    public int cashToMilesConverter(double cashValue) {
+        int convertedCashToMiles = (int)(cashValue/CONVERSION_RATE);
+        return convertedCashToMiles;
+    }
+
 }
