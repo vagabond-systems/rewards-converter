@@ -15,6 +15,20 @@ public class RewardsConverter {
         }
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
-        System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        System.out.println("$" + input_value + " is worth " + rewardsValue.cashToMilesConverter(cashValue) + " miles");
+
+        System.out.println("Please enter a miles value to convert to cash: ");
+        var input = scanner.nextLine();
+        int milesValue;
+        try {
+            milesValue = (int)(Integer.parseInt(input));
+        } catch (NumberFormatException exception) {
+            System.out.println("Could not parse input value as an integer, exiting");
+            return;
+        }
+        System.out.println("converting " + input + " miles to $");
+        var rewardsValue2 = new RewardValue(milesValue);
+        System.out.println(input + " miles are worth $" + rewardsValue2.milesToCashConverter(milesValue));
     }
+
 }
