@@ -15,11 +15,7 @@ public class RewardValue {
         double converted = (double)(milesValue * 0.0035);
         this.setCashValue(converted);
     }
-
-    // RewardValue(float milesValue){
-    //   this.setMilesValue(milesValue);
-    //   this.setCashValue(milesValue * 0.0035);
-    // }
+    
 
     public static void main(String[] args){
 
@@ -41,7 +37,4 @@ public class RewardValue {
         this.milesValue = milesValue;
     }
 
-    // public void convert() {
-    //   this.milesValue = cashValue * 2;
-    // }
 }
