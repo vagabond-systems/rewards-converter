@@ -34,4 +34,3 @@ public class RewardValue {
         return milesValue * 0.0035;
     }
 }
-
