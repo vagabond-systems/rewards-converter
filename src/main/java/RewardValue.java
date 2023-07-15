@@ -15,7 +15,7 @@ public class RewardValue {
         double converted = (double)(milesValue * 0.0035);
         this.setCashValue(converted);
     }
-    
+
 
     public static void main(String[] args){
 
