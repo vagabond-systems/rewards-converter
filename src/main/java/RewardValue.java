@@ -21,10 +21,10 @@ public class RewardValue {
     }
     public int cashToMiles(double cash)
     {
-        return (int)(cash * CONVERSION_RATE);
+        return (int)(cash / CONVERSION_RATE);
     }
     public double milesToCash(int miles)
     {
-        return (double) (miles/CONVERSION_RATE);
+        return (double) (miles*CONVERSION_RATE);
     }
 }
