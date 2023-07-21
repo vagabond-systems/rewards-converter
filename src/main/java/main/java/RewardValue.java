@@ -10,13 +10,15 @@ public class RewardValue {
         this.milesValues=milesValue;
     }
     public String getMilesValue() {
-        double result = cashValue*0.0035;
-        return String.valueOf(result);
-
+        return conversionToMiles(this.cashValue);
     }
 
-    public void getCashValue() {
-
+    public double getCashValue() {
+      return cashValue;
     }
 
+    //for conversion
+    public String conversionToMiles(double cashValue){
+        return String.valueOf(cashValue/0.0035);
+    }
 }
