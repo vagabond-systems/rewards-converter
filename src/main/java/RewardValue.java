@@ -10,11 +10,18 @@ public class RewardValue {
     }
 
     public double getCashValue() {
-//        return (this.milesValue * 0.0035);
-        return this.cashValue;
+        if (milesValue > 0) {
+            return (this.milesValue * 0.0035);
+        } else {
+            return this.cashValue;
+        }
     }
     public double getMilesValue() {
-//        return (this.cashValue / 0.0035);
-        return this.milesValue;
+        if (cashValue > 0) {
+            return (this.cashValue / 0.0035);
+        } else {
+            return this.milesValue;
+        }
+
     }
 }
