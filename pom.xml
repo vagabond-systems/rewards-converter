@@ -8,12 +8,15 @@
     <artifactId>rewards-converter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version> <!-- Replace with the latest version available -->
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <properties>
