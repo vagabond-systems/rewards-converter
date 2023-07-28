@@ -1,14 +1,14 @@
 public class RewardValue {
     private double CashValue;
-    private double MilesValue;
+    private int MilesValue;
 
     
     public RewardValue (double CashValue) {
         this.CashValue = CashValue;
-        this.MilesValue = CashValue / 0.0035;
+        this.MilesValue = (int) (CashValue / 0.0035);
     }
 
-    public RewardValue (float MilesValue) {
+    public RewardValue (int MilesValue) {
         this.MilesValue = MilesValue;
         this.CashValue = MilesValue * 0.0035;
     }
@@ -17,7 +17,7 @@ public class RewardValue {
         return CashValue;
     }
 
-    public Double getMilesValue () {
+    public int getMilesValue () {
         return MilesValue;
     }
 }
