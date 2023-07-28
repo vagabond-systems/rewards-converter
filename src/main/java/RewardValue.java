@@ -33,4 +33,8 @@ public class RewardValue {
     public double cashToMiles(double cashValue) {
         return cashValue / 0.0035;
     }
+
+    public static void main(String[] args) {
+        // Test the RewardValue class here if needed
+    }
 }
