@@ -46,7 +46,7 @@ public class RewardValueTests {
         assertEquals(0, rewardValue.getMilesValue(), "getMilesValue does not convert the cashAmount correctly");
     }
     @Test
-    public void throws_Exception_when_inserting_negative_for_cashValue() {
+    void throws_Exception_when_inserting_negative_for_cashValue() {
         double cashValue = -10.25;
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             RewardValue rewardValue = new RewardValue(cashValue);
@@ -58,7 +58,7 @@ public class RewardValueTests {
         assertTrue(actualMessage.contains(expectedMessage), "IllegalArgumentException was not thrown when inserting negative value for cashValue");
     }
     @Test
-    public void throws_Exception_when_inserting_negative_for_milesValue() {
+    void throws_Exception_when_inserting_negative_for_milesValue() {
         int milesValue = -10000;
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             RewardValue rewardValue = new RewardValue(milesValue);
@@ -71,7 +71,7 @@ public class RewardValueTests {
     }
 
     @Test
-    public void convert_from_near_zero_cash_to_correct_miles() {
+    void convert_from_near_zero_cash_to_correct_miles() {
         double cashValue = 0.01;
         RewardValue rewardValue = new RewardValue(cashValue);
         assertEquals(2.857142857142857, rewardValue.getMilesValue(), "getMilesValue does not convert the cashAmount correctly");
