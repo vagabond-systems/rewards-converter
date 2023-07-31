@@ -2,24 +2,31 @@
 public class RewardValue {
 
     private double cashValue;
-    private String mileValue;
+    private int mileValue;
+    public  final double rate = 0.0035;
     RewardValue(double value)
     {
-        cashValue = value * 0.0035;
-        mileValue = String.valueOf(cashValue);
+        cashValue = value;
     }
-    RewardValue(String value)
+    RewardValue(int value)
     {
-       mileValue = value;
-       double temp;
-       temp = Double.parseDouble(mileValue);
-       cashValue = temp/0.0035;
+      mileValue = value;
     }
 
-    public String getMilesValue() {
-        return mileValue;
+    public  int convertToMiles(double value)
+    {
+        return (int)(value/rate);
+    }
+
+    public int getMilesValue() {
+     return mileValue;
     }
      public double getCashValue() {
         return cashValue;
+    }
+
+    public double convertToCash(int milevalue){
+
+        return milevalue * rate;
     }
 }
