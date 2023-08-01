@@ -1,28 +1,32 @@
 
 public class RewardValue {
-    private double cashValue;
-    private int milesValue;
+    private final double cashValue;
+    public static final double ratio = 0.0035;
+
 
     // TWO CONSTRUCTORS (overloaded)
     //takes in cash value
     public RewardValue(double cashValue){//to avoid error need boolean
         this.cashValue = cashValue;
-        this.milesValue = milesValue;
     }
     //takes in miles value
     public RewardValue(int milesValue){
-        this.milesValue = milesValue;
-        this.cashValue = cashValue;
+        this.cashValue = toCash(milesValue);
     }
     
-    //METHODS
+    //METHODS//
+
+    private static double toCash(int milesValue){
+        return  milesValue * ratio;
+    }
+    private static int toMiles(double cashValue){
+        return (int) (cashValue / ratio);
+    }
 
     //miles to cash
     public double getCashValue(){
-        return (milesValue * 0.0035);
+        return cashValue;
     }
     //cash to miles
-    public int getMilesValue(){
-        return (int)(cashValue / 0.0035); 
-    }
+    public int getMilesValue(){ return toMiles(cashValue);}
 }
