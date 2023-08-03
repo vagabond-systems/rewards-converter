@@ -30,6 +30,6 @@ public class RewardValueTests {
     void convert_from_miles_to_cash() {
         int milesValue = 100;
         var rewardValue = new RewardValue(milesValue);
-        assertEquals( milesValue*MILESCONVERTVALUE, rewardValue.getCashValue());
+        assertEquals(milesValue*MILESCONVERTVALUE, rewardValue.getCashValue());
     }
 }
