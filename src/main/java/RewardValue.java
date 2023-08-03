@@ -1,26 +1,23 @@
 /*
-This class is functions as a converter for miles and cash. I created two variables: cashValue and miles, and made them
-private to not allow the users of RewardsConverter class to change the values. I also created two get methods that convert
-cash to miles and miles to cash and providing the users the conversion.
+This class functions as a converter for miles and cash. I created two variables: cashValue and milesValue and made them
+private to not allow the users of the RewardsConverter class to change the values. I also created two methods to provide
+the users the ability to convert cash to miles and miles to cash.
  */
 public class RewardValue {
 
     private double cashValue;
     private float milesValue;
-    public RewardValue(double cashValue){
+
+    public RewardValue(double cashValue) {
         this.cashValue = cashValue;
+        this.milesValue = (float) (cashValue / 0.0035);
     }
 
-    public RewardValue(float milesValue){
-        this.milesValue = milesValue;
+    public double getCashValue() {
+        return cashValue;
     }
 
-    public double getCashValue(){
-        return milesValue * 0.0035;
+    public float getMilesValue() {
+        return (float)(milesValue * 0.0035);
     }
-
-    public float getMilesValue(){
-        return (float) (cashValue / 0.0035);
-    }
-
 }
