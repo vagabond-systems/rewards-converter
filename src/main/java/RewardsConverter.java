@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class RewardsConverter {
+
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         System.out.println("Welcome to the Credit Card Rewards Converter!");
