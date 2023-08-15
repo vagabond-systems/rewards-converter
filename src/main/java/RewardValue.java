@@ -18,7 +18,7 @@ public class RewardValue {
   }
 
   private static double convertToCash(int miles){
-    return miles *.035;
+    return miles * .035;
   }
 
   private static int convertToMiles(double cash){
