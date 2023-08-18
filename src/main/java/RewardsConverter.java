@@ -6,6 +6,7 @@ public class RewardsConverter {
         System.out.println("Welcome to the Credit Card Rewards Converter!");
         System.out.println("Please enter a cash value to convert to airline miles: ");
         var input_value = scanner.nextLine();
+        scanner.close();
         double cashValue;
         try {
             cashValue = Double.parseDouble(input_value);
@@ -16,5 +17,6 @@ public class RewardsConverter {
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        
     }
 }
