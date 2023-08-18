@@ -30,5 +30,6 @@ class RewardValue {
 
     public double getMilesValue() {
         return cashValue * CONVERSION_RATE;
+        
     }
 }
