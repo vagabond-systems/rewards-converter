@@ -2,6 +2,8 @@ public class RewardValue {
 
     private double rewardValue;
     private int miles;
+
+    private static final double CONVERSION_RATE = 0.0035;
     public RewardValue(double inputCashValue){
         rewardValue = inputCashValue;
     }
@@ -15,6 +17,6 @@ public class RewardValue {
     }
 
     public double getMilesValue(){
-        return rewardValue * 0.0035;
+        return rewardValue / CONVERSION_RATE;
     }
 }
