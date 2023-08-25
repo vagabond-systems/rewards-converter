@@ -13,6 +13,10 @@ public class RewardValue {
         if (isMiles) {
             this.milesValue = milesValue;
             this.cashValue = milesValue / 0.0035; // Convert to cash
+        } else {
+            // Handle the case where the flag is not true
+            this.milesValue = 0; // Set a default value or handle the scenario as needed
+            this.cashValue = 0; // Set a default value or handle the scenario as needed
         }
     }
 
