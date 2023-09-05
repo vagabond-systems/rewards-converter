@@ -1,3 +1,8 @@
+/*
+ * Christopher Tu
+ * JPMC Forage SWE Lite Module
+ * RewardsConverter.java
+ */
 import java.util.Scanner;
 
 public class RewardsConverter {
