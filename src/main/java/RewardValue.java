@@ -14,12 +14,12 @@ public class RewardValue {
           this.cash = convertToCash(miles);
     }
 
-    private static double convertToCash(int miles){
+    static double convertToCash(int miles){
 
         return miles * miles_to_cash;
     }
 
-    private static int convertToMiles(double cash){
+    static int convertToMiles(double cash){
 
         return (int) (cash / miles_to_cash);
     }
