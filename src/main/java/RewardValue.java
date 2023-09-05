@@ -11,7 +11,7 @@ public class RewardValue {
     RewardValue(int miles){
 
 
-        this.miles = miles;
+         this.miles = miles;
     }
 
 
