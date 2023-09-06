@@ -1,3 +1,6 @@
+package test.java;
+
+import main.java.RewardValue;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
