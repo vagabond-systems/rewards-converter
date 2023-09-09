@@ -3,27 +3,7 @@ import java.util.Scanner;
 
 public class RewardsConverter {
 
-    public static class RewardValue{
 
-        double cashValue;
-        int miles;
-        RewardValue(double cashValue){
-            this.cashValue = cashValue;
-            this.miles = (int)(cashValue / 0.0035);
-        }
-
-        RewardValue(int milesValue){
-            this.cashValue = milesValue * 0.0035;
-            this.miles = milesValue;
-        }
-
-        public double getMilesValue(){
-            return miles;
-        }
-        public double getCashValue(){
-            return cashValue;
-        }
-    }
 
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
