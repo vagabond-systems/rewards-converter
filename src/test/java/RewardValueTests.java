@@ -29,10 +29,8 @@ public class RewardValueTests {
     @Test
     void convert_from_miles_to_cash() {
         int milesValue = 100;
-
         var rewardValue = new RewardValue(milesValue);
         double cashValue = milesValue*converstionfactor;
-
         double tolerance = 0.009; // to check if number is correct nearest pence
         assertEquals(cashValue, rewardValue.getCashValue(),tolerance);
     }
