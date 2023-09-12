@@ -1,5 +1,5 @@
 public class RewardValue {
-    private double cash;
+    private final double cash;
 
     public RewardValue(double cash) {
         this.cash = cash;
