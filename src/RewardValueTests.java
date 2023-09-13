@@ -34,3 +34,4 @@ public class RewardValueTests {
         assertEquals(milesValue * CONVERSION_RATE, rewardValue.getCashValue());
     }
 }
+
