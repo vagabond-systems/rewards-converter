@@ -1,22 +1,23 @@
 public class RewardValue {
     private double cash;
-    private double value;
+    private int value;
     public RewardValue(double c)
     {
         cash = c;
+        value = (int)(c/0.0035);
+
     }
     public RewardValue(int m)
     {
-        value = m * 0.0035;
+        value = m;
+        cash = m * 0.0035;
     }
     public double getCashValue()
     {
-        return value;
-
+        return cash;
     }
     public int getMilesValue()
     {
-        return (int)(cash/0.0035);
-
+        return value;
     }
 }
