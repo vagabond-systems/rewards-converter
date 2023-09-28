@@ -18,7 +18,7 @@ public class RewardValue {
         return miles_Value * covert_Rate_from_MILES_To_Cash;
     }
 
-    public double getcashValue() {
+    public double getCashValue() {
         return cash_Value;
     }
 
