@@ -2,7 +2,7 @@ public class RewardValue {
     public int miles;
     public double cash;
 
-    private double MULTIPLIER = 0.0035;
+    private final double MULTIPLIER = 0.0035;
 
     public RewardValue(int mileVal) {
         this.miles = mileVal;
@@ -17,6 +17,6 @@ public class RewardValue {
     }
 
     public double getCashValue() {
-        return (double) (this.miles * MULTIPLIER);
+        return (this.miles * MULTIPLIER);
     }
 }
