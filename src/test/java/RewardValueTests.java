@@ -6,7 +6,7 @@ public class RewardValueTests {
 
     @Test
     void create_with_cash_value() {
-        double cashValue = 100;
+        double cashValue = 100.0;
         var rewardValue = new RewardValue(cashValue);
         assertEquals(cashValue, rewardValue.getCashValue());
     }
