@@ -8,26 +8,33 @@ public class RewardValue {
     }
     RewardValue(int miles){
 
-        this.miles=miles;
+        this.cash=cvttocash(miles);
 
 
     }
 
 
     public  double getCashValue(){
-        return cash;
+        return this.cash;
 
 
     }
 
-    public double getMilesValue(){
+    public int getMilesValue(){
         
-        double finalmiles= (cash/0.0035);
-        return finalmiles;
+       // double finalmiles= (this.cash/0.0035);
+        return (int) cvttomiles(this.cash);
     }
     
 
+    public static int cvttomiles( double cash){
+        return (int) (cash/0.0035);
 
+    }
+
+    public static double cvttocash(int miles){
+        return (miles*0.0035);
+    }
 
 
 
