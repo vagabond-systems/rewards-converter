@@ -4,10 +4,12 @@ public class RewardValue {
     double conversionRate = 0.0035;
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
+        this.milesValue = convertCashToMiles(cashValue);
     }
 
     public RewardValue(int milesValue) {
         this.milesValue = milesValue;
+        this.cashValue = convertMilesToCash(milesValue);
     }
     public double getCashValue() {
         return cashValue;
