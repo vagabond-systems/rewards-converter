@@ -18,7 +18,7 @@ public class RewardValue {
         return milesValue;
     }
 
-    private double convertMilesToCash(double milesValue) {
+    private double convertMilesToCash(int milesValue) {
         return milesValue * conversionRate;
     }
 
