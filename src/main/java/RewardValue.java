@@ -1,22 +1,26 @@
 public class RewardValue {
     double cashValue;
-    int mileValue;
+    double mileValue;
+    double mileConversionRate = 0.0035;
+
 
     public RewardValue(double cashValue){
         this.cashValue = cashValue;
+        this.mileValue = cashValue/mileConversionRate;
     }
+
     public RewardValue(int mileValue){
+
         this.mileValue = mileValue;
+        this.cashValue = mileValue * mileConversionRate;
     }
 
     public double getCashValue(){
-        return mileValue * 0.0035;
+        return cashValue;
     }
 
     public double getMilesValue(){
-        return cashValue/0.0035;
-    }
-
+        return mileValue;    }
 }
 
 //RewardValue must have two constructors: one that accepts a cash value and one that accepts a value in miles.
