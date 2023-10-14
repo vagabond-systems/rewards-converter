@@ -1,17 +1,18 @@
 package RewardValue;
 
 public class RewardValue {
-    double cash;
+    private final double cash;
+    public static final double miles_to_cash_conversion_rate = 0.0035;
 //    double miles;
     public RewardValue(double cashValue) {
-        cash = cashValue;
+        this.cash = cashValue;
     }
 
     public double getCashValue(){
-        return cash;
+        return this.cash;
     }
 
     public double getMilesValue() {
-        return cash*0.0035;
+        return (int) (this.cash/miles_to_cash_conversion_rate);
     }
 }
