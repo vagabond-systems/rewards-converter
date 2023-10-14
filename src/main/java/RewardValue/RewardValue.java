@@ -7,6 +7,13 @@ public class RewardValue {
     public RewardValue(double cashValue) {
         this.cash = cashValue;
     }
+    public RewardValue(int milesValue) {
+        this.cash = convertToCash(milesValue); // when we have miles with us we use convert_to_cash to get cash
+    }
+
+    public double convertToCash(int milesValue) {
+        return milesValue*miles_to_cash_conversion_rate;
+    }
 
     public double getCashValue(){
         return this.cash;
