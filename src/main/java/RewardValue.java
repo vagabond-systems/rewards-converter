@@ -13,6 +13,7 @@ public class RewardValue {
     }
 
     int getMilesValue()    {
+
         return (int) (cash*0.0035);
     }
 
