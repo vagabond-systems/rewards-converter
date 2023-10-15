@@ -19,6 +19,7 @@ public class RewardValueTests {
     }
 
     @Test
+    // test for cash to miles
     void convert_from_cash_to_miles() {
         double cashValue = 100;
         int expected = (int) (cashValue/RewardValue.MILES_TO_CASH_CONVERSION_RATE);
