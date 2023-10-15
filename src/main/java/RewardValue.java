@@ -10,6 +10,9 @@ public class RewardValue {
             this.miles = miles;
             this.cash = miles * 0.0035;
         }
+        else{
+            throw new IllegalArgumentException("Invalid constructor for miles value.");
+        }
     }
     double getCashValue(){
         return cash;
