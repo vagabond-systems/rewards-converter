@@ -1,6 +1,6 @@
 public class RewardValue {
 private final double CashValue;
-private static final double rate=0.0035;
+public static final double rate=0.0035;
     public RewardValue(double cashValue) {
         CashValue= cashValue;
     }
