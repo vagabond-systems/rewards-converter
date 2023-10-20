@@ -1,5 +1,3 @@
-package mainj;
-
 public class RewardValue {
 
     double cash;
@@ -7,7 +5,7 @@ public class RewardValue {
 
     public RewardValue(double cash){
         this.cash = cash;
-        this.miles = cash/0.0035;
+        this.miles = (int)(cash/0.0035);
     }
     public RewardValue(int miles){
         this.miles = miles;

@@ -1,5 +1,3 @@
-package mainj;
-
 import java.util.Scanner;
 
 public class RewardsConverter {
