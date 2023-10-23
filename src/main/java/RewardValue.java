@@ -14,7 +14,7 @@ public class RewardValue {
     public double getCashValue(){
         return cashValue;
     }
-    public double getMilesValue(){
-        return milesValue;
+    public int getMilesValue(){
+        return (int)milesValue;
     }
 }
