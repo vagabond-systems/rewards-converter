@@ -9,11 +9,11 @@ public class RewardValue {
     }
 
     public RewardValue(int milesValue) {
-        this.milesValue = milesValue;
+        this.cashValue = milesValue * CONVERSION_RATE;
     }
 
     public double getCashValue() {
-        return this.milesValue * CONVERSION_RATE;
+        return this.cashValue;
     }
 
     public int getMilesValue() {
