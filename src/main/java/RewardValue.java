@@ -1,7 +1,7 @@
 //package main.java;
 public class RewardValue {
-    private double cashValue;
-    private double milesValue;
+    private final double cashValue;
+    private final double milesValue;
     public RewardValue(double cashValue)
     {
         this.cashValue =cashValue;
@@ -18,6 +18,6 @@ public class RewardValue {
     }
     public double getMilesValue()
     {
-        return milesValue;
+        return (int)milesValue;
     }
 }
