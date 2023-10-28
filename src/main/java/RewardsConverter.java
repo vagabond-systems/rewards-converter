@@ -12,6 +12,8 @@ public class RewardsConverter {
         } catch (NumberFormatException exception) {
             System.out.println("Could not parse input value as a double, exiting");
             return;
+        } finally	{
+        	scanner.close();
         }
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
