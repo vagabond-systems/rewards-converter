@@ -1,12 +1,12 @@
 public class RewardValue {
 
-    private double miles;
+    private int miles;
     private double cashValue;
 
     // Constructor that takes cashValue as a parameter
     RewardValue(double cashValue){
         this.cashValue = cashValue;
-        this.miles = cashValue/0.0035;
+        this.miles = (int)(cashValue/0.0035);
     }
 
     // Constructor that takes miles as a parameter
