@@ -1,16 +1,30 @@
+import static java.lang.Math.round;
+
 public class RewardValue {
     private double cashValue;
-    private double milesValue;
+    private static final double MILES_TO_CASH_RATE = 0.0035;
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = cashValue / 0.0035;
+    }
+    public RewardValue(int milesValue){
+        this.cashValue = convertToCash(milesValue);
     }
 
-    public double getMilesValue() {
-        return milesValue;
+    public static int convertToMiles(double cashValue){
+        return (int) (cashValue / MILES_TO_CASH_RATE);
+    }
+
+    public static double convertToCash(int milesValue){
+        return milesValue * MILES_TO_CASH_RATE;
     }
 
     public double getCashValue() {
         return cashValue;
     }
+
+    public int getMilesValue(){
+        return convertToMiles(this.cashValue);
+    }
+
+
 }
