@@ -7,13 +7,9 @@ public class RewardValue {
         this.milesValue = cashValue / 0.0035;
     }
 
-    public RewardValue(double milesValue, boolean isMiles) {
-        if (isMiles) {
-            this.milesValue = milesValue;
-            this.cashValue = milesValue * 0.0035;
-        } else {
-            throw new IllegalArgumentException("Invalid constructor usage. Use the constructor with cash value.");
-        }
+    public RewardValue(int milesValue) {
+        this.milesValue = milesValue;
+        this.cashValue = milesValue * 0.0035;
     }
 
     public double getCashValue() {
@@ -22,5 +18,14 @@ public class RewardValue {
 
     public double getMilesValue() {
         return milesValue;
+    }
+
+    public void convertFromCashToMiles() {
+        this.milesValue = cashValue / 0.0035;
+    }
+
+
+    public void convertFromMilesToCash() {
+        this.cashValue = milesValue * 0.0035;
     }
 }
