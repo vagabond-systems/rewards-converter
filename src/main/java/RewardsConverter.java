@@ -1,3 +1,5 @@
+import RevardValue.RewardValue;
+
 import java.util.Scanner;
 
 public class RewardsConverter {
