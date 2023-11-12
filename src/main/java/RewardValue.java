@@ -16,10 +16,12 @@ public class RewardValue {
 
     // two constructors
     public RewardValue(double cashValue) {
+        this.cashValue = cashValue;
         this.milesValue = cashToMiles(cashValue);
     }
 
     public RewardValue(int milesValue) {
+        this.milesValue = milesValue;
         this.cashValue = milesToCash(milesValue);
     }
 
