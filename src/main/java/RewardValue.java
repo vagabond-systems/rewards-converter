@@ -5,16 +5,7 @@ public class RewardValue {
 
     private int milesValue;
 
-    public RewardValue(double cashValue) {
-        this.cashValue = cashValue;
-        this.milesValue = (int)(cashValue / (MILES_TO_CASH_RATE));
-    }
-
-    public RewardValue(int milesValue) {
-        this.milesValue = milesValue;
-        this.cashValue = milesValue * MILES_TO_CASH_RATE;
-    }
-
+    // getters
     public double getCashValue() {
         return cashValue;
     }
@@ -22,4 +13,24 @@ public class RewardValue {
     public int getMilesValue() {
         return milesValue;
     }
+
+    // two constructors
+    public RewardValue(double cashValue) {
+        this.milesValue = cashToMiles(cashValue);
+    }
+
+    public RewardValue(int milesValue) {
+        this.cashValue = milesToCash(milesValue);
+    }
+
+    // two methods to convert
+    public int cashToMiles(double cashValue){
+        return (int) (cashValue / MILES_TO_CASH_RATE);
+    }
+
+    public double milesToCash(int milesValue){
+        return milesValue * MILES_TO_CASH_RATE;
+    }
+
+
 }
