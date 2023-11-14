@@ -1,41 +1,28 @@
-    public class RewardValue {
-        private double cashValue;
-        private double milesValue;
+public class RewardValue {
+    private final double cashValue;
+    public static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
 
-        // Constructor that accepts a cash value
-        public RewardValue(double cashValue) {
-            this.cashValue = cashValue;
-            this.milesValue = convertToMiles(cashValue);
-        }
-
-        // Constructor that accepts a value in miles
-        public RewardValue(double milesValue, boolean isMiles) {
-            if (isMiles) {
-                this.milesValue = milesValue;
-                this.cashValue = convertToCash(milesValue);
-            } else {
-                throw new IllegalArgumentException("Invalid constructor call. Use the constructor with cash value.");
-            }
-        }
-
-        // Getter method for cash value
-        public double getCashValue() {
-            return cashValue;
-        }
-
-        // Getter method for miles value
-        public double getMilesValue() {
-            return milesValue;
-        }
-
-        // Helper method to convert cash to miles
-        private double convertToMiles(double cashValue) {
-            return cashValue / 0.0035;
-        }
-
-        // Helper method to convert miles to cash
-        private double convertToCash(double milesValue) {
-            return milesValue * 0.0035;
-        }
+    public RewardValue(double cashValue) {
+        this.cashValue = cashValue;
     }
 
+    public RewardValue(int milesValue) {
+        this.cashValue = convertToCash(milesValue);
+    }
+
+    private static int convertToMiles(double cashValue) {
+        return (int) (cashValue / MILES_TO_CASH_CONVERSION_RATE);
+    }
+
+    private static double convertToCash(int milesaValue) {
+        return milesaValue * MILES_TO_CASH_CONVERSION_RATE;
+    }
+
+    public double getCashValue() {
+        return cashValue;
+    }
+
+    public int getMilesValue() {
+        return convertToMiles(this.cashValue);
+    }
+}
