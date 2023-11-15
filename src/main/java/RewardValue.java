@@ -16,6 +16,11 @@ public class RewardValue {
         return cashValue;
     }
 
+    public RewardValue(double cashValue, int milesValue) {
+        this.cashValue = cashValue;
+        this.milesValue = milesValue;
+    }
+
     public int getMilesValue() {
         return milesValue;
     }
