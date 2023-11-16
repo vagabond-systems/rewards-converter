@@ -1,6 +1,6 @@
 public class RewardValue {
     private int mileValue;
-    double cashValue;
+    private double cashValue;
     final double MILE_TO_CASH_CONVERSION_RATE = 0.0035;
 
     public RewardValue(double cashValue) {
@@ -24,6 +24,8 @@ public class RewardValue {
         //At this stage of the project, I'm assuming that get MileValues is the only
         //method that do the conversion. In the future, I expected to have a method that
         //do the calculation and return the value separately.
-        return (int) (cashValue*MILE_TO_CASH_CONVERSION_RATE);
+
+        int rewardMileVal = (int) (this.cashValue * MILE_TO_CASH_CONVERSION_RATE);
+        return rewardMileVal;
     }
 }
