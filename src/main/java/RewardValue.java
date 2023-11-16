@@ -1,17 +1,25 @@
 public class RewardValue {
-    private double in;
-    public RewardValue(double in){
-        setInput(in);
+    private double cash;
+    private int miles;
+    public RewardValue(double cash){
+        setCash(cash);
     }
-    public void setInput(double c){
-        this.in=c;
+    public RewardValue(int miles){
+        setMiles(miles);
+    }
+    
+    public void setCash(double c){
+        this.cash=c;
+    }
+    public void setMiles(int m){
+        this.miles=m;
     }
 
     public double getCashValue() {
-        return in*0.0035;
+        return miles*0.0035;
     }
 
-    public double getMilesValue() {
-        return in/0.0035;
+    public int getMilesValue() {
+        return (int)cash/0.0035;
     }
 }
