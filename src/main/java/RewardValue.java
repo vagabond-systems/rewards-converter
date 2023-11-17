@@ -2,6 +2,7 @@ public class RewardValue {
 
     private double cashValue;
     private double milesValue;
+    private static final double CONVERSION_RATE = 0.0035;
 
 
     //constructor that accepts  a cash value
@@ -36,13 +37,13 @@ public class RewardValue {
 
     //Private method to convert cash value to miles
     private double convertToMiles(double cashValue) {
-        return cashValue * 0.0035;
+        return cashValue * CONVERSION_RATE;
 
     }
 
     //Private method to convert miles value to cash
     private double convertToCash(double milesValue) {
-        return milesValue / 0.0035;
+        return milesValue / CONVERSION_RATE;
 
     }
 }
