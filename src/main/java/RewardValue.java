@@ -14,7 +14,7 @@ public class RewardValue {
             this.cashValue = milesValue * 0.0035;
         }
     }
-    public double getcashValue(){
+    public double getCashValue(){
         return cashValue;
     }
 
