@@ -1,3 +1,5 @@
+import model.RewardValue;
+
 import java.util.Scanner;
 
 public class RewardsConverter {
