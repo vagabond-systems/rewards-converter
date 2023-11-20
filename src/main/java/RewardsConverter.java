@@ -19,6 +19,7 @@ public class RewardsConverter {
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
         System.out.println("-----------------------------------------------------");
         System.out.println("Please enter a airline miles value to convert to cash value: ");
+
         var input_value2 = scanner.nextLine();
         double milesValue;
         try {
