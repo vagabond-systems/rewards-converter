@@ -3,7 +3,7 @@ public class RewardValue {
     private double cashValue;
     private double milesValue;
 
-    
+
     public static final double CONVERSION_RATE=0.0035;
 
 
@@ -49,7 +49,7 @@ public class RewardValue {
     //Private method to convert miles value to cash
     private double convertToCash(double milesValue) {
 
-        return milesValue / CONVERSION_RATE;
+        return milesValue * CONVERSION_RATE;
 
 
 
