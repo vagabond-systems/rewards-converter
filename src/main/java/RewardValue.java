@@ -5,14 +5,14 @@ public class RewardValue {
 
     public RewardValue(double cash) {
         this.cash = cash;
-        cashToPoints(cash);
+        cashToMiles(cash);
 
     }
 
 
 
     public double getCashValue() {
-        return cash;
+        return this.cash;
     }
 
 
@@ -22,15 +22,22 @@ public class RewardValue {
 
     public RewardValue(float miles){
         this.miles = miles;
-    }
-    public float getMilesValue(){
-        return miles;
+        milesToCash(miles);
     }
 
-    private void cashToPoints(double cash){
+    public float getMilesValue(){
+        return this.miles;
+    }
+
+    private void cashToMiles(double cash){
 
         this.miles = (float) (cash*.0035);
+    }
 
+    private void milesToCash(float miles){
+
+        this.cash = miles/.0035F;
+        System.out.println(this.cash);
     }
 
 }
