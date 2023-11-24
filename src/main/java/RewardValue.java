@@ -1,17 +1,28 @@
+import java.math.BigDecimal;
+
 public class RewardValue {
     private int mileValue;
-    private final double MILE_TO_CASH_CONVERSION_RATE = 0.0035;
+    private final BigDecimal MILE_TO_CASH_CONVERSION_RATE = new BigDecimal("0.0035");
+    //The issue with double inconsistency is that the value is not a whole number
+    //Pivot to BigDecimal to be more precise and reconvert it to double when needed
 
     public RewardValue(double cashValue) {
         this.mileValue = convertCashToMile(cashValue);
     }
 
+
+    // Convert miles to cash
+    // Needs to check the edge cases where the value is not a whole number
     private double convertMileToCash(int mileValue) {
-        return mileValue * MILE_TO_CASH_CONVERSION_RATE;
+        BigDecimal miles = new BigDecimal(mileValue);
+        return miles.multiply(MILE_TO_CASH_CONVERSION_RATE).doubleValue();
     }
 
     private int convertCashToMile(double cashValue) {
-        return (int) (cashValue / MILE_TO_CASH_CONVERSION_RATE);
+        BigDecimal cash = new BigDecimal(cashValue);
+        // Use ROUND_HALF_UP for rounding similar to Math.round
+        BigDecimal miles = cash.divide(MILE_TO_CASH_CONVERSION_RATE, BigDecimal.ROUND_HALF_UP);
+        return miles.intValue();
     }
 
     //Java require overloaded constructor to have different types of sequences of parameters
