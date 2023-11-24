@@ -2,14 +2,17 @@ import java.math.BigDecimal;
 
 public class RewardValue {
     private int mileValue;
+    private double cashValue;
+    private final boolean initializedWithCash;
     private final BigDecimal MILE_TO_CASH_CONVERSION_RATE = new BigDecimal("0.0035");
     //The issue with double inconsistency is that the value is not a whole number
     //Pivot to BigDecimal to be more precise and reconvert it to double when needed
 
     public RewardValue(double cashValue) {
+        this.cashValue = cashValue;
         this.mileValue = convertCashToMile(cashValue);
+        this.initializedWithCash = true;
     }
-
 
     // Convert miles to cash
     // Needs to check the edge cases where the value is not a whole number
@@ -30,18 +33,24 @@ public class RewardValue {
 
     public RewardValue(int mileValue) {
         this.mileValue = mileValue;
+        this.cashValue = convertMileToCash(mileValue);
+        this.initializedWithCash = false;
     }
 
     public double getCashValue() {
-        //convert cash value to miles
-        return  convertMileToCash(this.mileValue);
+        if (initializedWithCash) {
+            return this.cashValue;
+        } else {
+            return convertMileToCash(this.mileValue);
+        }
     }
 
+
     public int getMilesValue() {
-        //convert miles value to cash
-        //At this stage of the project, I'm assuming that get MileValues is the only
-        //method that do the conversion. In the future, I expected to have a method that
-        //do the calculation and return the value separately.
-        return this.mileValue;
+        if (initializedWithCash) {
+            return convertCashToMile(this.cashValue);
+        } else {
+            return this.mileValue;
+        }
     }
 }
