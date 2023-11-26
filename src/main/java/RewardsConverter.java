@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class RewardsConverter {
     public static void main(String[] args) {
@@ -16,5 +17,29 @@ public class RewardsConverter {
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+    }
+}
+
+class RewardValue {
+    double reward_cashvalue;
+    int reward_milesValue;
+    
+    public RewardValue(double cashValue){
+        reward_cashvalue = cashValue;
+    }
+
+
+    public RewardValue(int milesValue){
+        reward_milesValue = milesValue; 
+    }
+
+    public double getCashValue(){
+        if (reward_cashvalue == 0.0) return Math.round(reward_milesValue/0.0035);
+        return reward_cashvalue;
+    }
+    public int getMilesValue(){
+        if (reward_milesValue==0)
+            return (int)(reward_cashvalue*0.0035);
+        return reward_milesValue;
     }
 }
