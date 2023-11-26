@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class RewardsConverter {
     public static void main(String[] args) {
@@ -21,22 +22,24 @@ public class RewardsConverter {
 
 class RewardValue {
     double reward_cashvalue;
-    double reward_milesValue;
+    int reward_milesValue;
     
     public RewardValue(double cashValue){
         reward_cashvalue = cashValue;
     }
 
 
-    public RewardValue(float milesValue){ 
+    public RewardValue(int milesValue){
         reward_milesValue = milesValue; 
     }
 
     public double getCashValue(){
+        if (reward_cashvalue == 0.0) return Math.round(reward_milesValue/0.0035);
         return reward_cashvalue;
     }
-    public double getMilesValue(){
-        if (reward_milesValue==0.0) return reward_cashvalue*0.0035;
-        else return reward_milesValue;
+    public int getMilesValue(){
+        if (reward_milesValue==0)
+            return (int)(reward_cashvalue*0.0035);
+        return reward_milesValue;
     }
 }
