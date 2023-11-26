@@ -18,3 +18,24 @@ public class RewardsConverter {
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
     }
 }
+
+class RewardValue {
+    double reward_cashvalue;
+    double reward_milesValue;
+    
+    public RewardValue(double cashValue){
+        reward_cashvalue = cashValue;
+    }
+
+
+    public RewardValue(float milesValue){ 
+        reward_milesValue = milesValue; 
+    }
+
+    public double getCashValue(){
+        return reward_cashvalue;
+    }
+    public double getMilesValue(){
+        return reward_cashvalue*0.0035;
+    }
+}
