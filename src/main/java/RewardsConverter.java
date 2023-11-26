@@ -36,6 +36,7 @@ class RewardValue {
         return reward_cashvalue;
     }
     public double getMilesValue(){
-        return reward_cashvalue*0.0035;
+        if (reward_milesValue==0.0) return reward_cashvalue*0.0035;
+        else return reward_milesValue;
     }
 }
