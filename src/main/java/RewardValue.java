@@ -2,6 +2,7 @@ public class RewardValue {
     private double cash;
     private float miles;
 
+    //Added two methods of returning cash and miles instead of changing unit tests
     public double getCash() {
         return cash;
     }
