@@ -21,7 +21,10 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        fail();
+        double cashValue = 10000;
+        RewardValue rewardValue = new RewardValue(cashValue);
+        double milesConversion = 10000 * 0.0035;
+        assertEquals(milesConversion, rewardValue.convertCashToMiles(cashValue));
     }
 
     @Test
