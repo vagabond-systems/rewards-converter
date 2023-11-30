@@ -2,14 +2,14 @@ import java.math.BigDecimal;
 
 public class RewardValue {
     private double cash = 0.0;
-    private int miles = 0;
+    private final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
 
     public RewardValue(double cash) {
         this.cash = cash;
     }
 
     public RewardValue(int miles) {
-        this.miles = miles;
+        this.cash = convertMilesToCash(miles);
     }
 
     public double getCashValue() {
@@ -17,14 +17,14 @@ public class RewardValue {
     }
 
     public double getMilesValue() {
-        return this.miles;
+        return convertCashToMiles(this.cash);
     }
 
-    public double convertMilesToCash() {
-        return this.miles / 0.0035;
+    public double convertMilesToCash(int miles) {
+        return miles / MILES_TO_CASH_CONVERSION_RATE;
     }
 
-    public int convertCashToMiles() {
-        return (int)(this.cash * 0.0035);
+    public int convertCashToMiles(double cash) {
+        return (int)(cash * MILES_TO_CASH_CONVERSION_RATE);
     }
 }
