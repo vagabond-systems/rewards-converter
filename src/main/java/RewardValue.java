@@ -1,12 +1,10 @@
 public class RewardValue {
     private final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
-    private double cashValue = 0.0;
-    private int milesValue = 0;
-
-    //The project specification says that you must convert from miles to cash. My reading of the problem is that this is a one-way conversion.
-    //Therefore, I do not convert cash back into miles when using the cash constructor
+    private double cashValue;
+    private int milesValue;
 
     public RewardValue(double cash) {
+        milesValue = (int) (cash / MILES_TO_CASH_CONVERSION_RATE);
         cashValue = cash;
     }
 
