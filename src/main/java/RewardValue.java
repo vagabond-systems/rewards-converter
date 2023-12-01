@@ -15,5 +15,5 @@ public class RewardValue {
     public int getMilesValue() {
         return this.miles;
     }
-    
+
 }
