@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RewardValueTests {
 
+    //The project specification says that you must convert from miles to cash. My reading is that this is a one-way conversion.
+    //Therefore, I do not convert cash back into miles when using the cash constructor
     @Test
     void create_with_cash_value() {
         double cashValue = 100;
