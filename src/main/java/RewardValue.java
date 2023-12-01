@@ -1,11 +1,11 @@
 public class RewardValue {
     private final double cashValue;
-    private static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
+    public static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
     }
     public RewardValue(int milesValue) {
-        this.cashValue = convertToMiles(milesValue);
+        this.cashValue = convertToCash(milesValue);
     }
 
     public static int convertToMiles(double cashValue) {
