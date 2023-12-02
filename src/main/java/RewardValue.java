@@ -14,7 +14,7 @@ public class RewardValue {
     // Constructor to create the RewardValue with Mile Value
     public RewardValue(int mile){
         this.milesValue = mile;
-        this.cashValue = this.milesValue*MilesToCash_ConvRate;
+        this.cashValue = this.milesValue * MilesToCash_ConvRate;
     }
 
     // Getter method for cashValue
