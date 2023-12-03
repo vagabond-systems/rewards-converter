@@ -13,7 +13,7 @@ class RewardValue extends RewardsConverter {
 
 
     public double getCashValue() {
-        return miles * 0.0035;
+        return Math.floor((miles * 0.0035) * 100) / 100;
     }
 
     public int getMilesValue() {
