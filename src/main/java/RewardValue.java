@@ -2,6 +2,7 @@
 public class RewardValue {
     //One that accepts cash value
     private final double cashValue;
+    //One that accepts miles value
     private final int milesValue;
 
     //Constructor that accepts cash value
