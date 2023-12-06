@@ -7,6 +7,7 @@ public class RewardValueTests {
     @Test
     void create_with_cash_value() {
         double cashValue = 100;
+        // creating a new reward value with double which means cash
         var rewardValue = new RewardValue(cashValue);
         assertEquals(cashValue, rewardValue.getCashValue());
     }
@@ -14,6 +15,7 @@ public class RewardValueTests {
     @Test
     void create_with_miles_value() {
         int milesValue = 10000;
+        // creating a new reward value with int which means its miles
         var rewardValue = new RewardValue(milesValue);
         assertEquals(milesValue, rewardValue.getMilesValue());
     }
