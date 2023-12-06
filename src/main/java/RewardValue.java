@@ -1,5 +1,4 @@
 //Must have two constructors
-import java.util.*;
 public class RewardValue {
     //One that accepts cash value
     private final double cashValue;
