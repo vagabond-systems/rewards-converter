@@ -19,12 +19,60 @@ public class RewardValueTests {
     }
 
     @Test
+    void convert_from_one_cash_to_miles() {
+        double cash = 1;
+        int miles = (int) (cash / .0035);
+        var rewardValue = new RewardValue(cash);
+        assertEquals(miles, rewardValue.getMilesValue());
+    }
+    @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        double cash = 250;
+        int miles = (int) (cash / .0035);
+        var rewardValue = new RewardValue(cash);
+        assertEquals(miles, rewardValue.getMilesValue());
+    }
+    @Test
+    void convert_from_max_cash_to_miles() {
+        double cash = Integer.MAX_VALUE;
+        int miles = (int) (cash / .0035);
+        var rewardValue = new RewardValue(cash);
+        assertEquals(miles, rewardValue.getMilesValue());
+    }
+    @Test
+    void convert_from_zero_cash_to_miles() {
+        double cash = 0;
+        int miles = 0;
+        var rewardValue = new RewardValue(cash);
+        assertEquals(miles, rewardValue.getMilesValue());
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        int miles = 10000;
+        double cash = miles * .0035;
+        var rewardValue = new RewardValue(miles);
+        assertEquals(cash, rewardValue.getCashValue());
+    }
+    @Test
+    void convert_from_zero_miles_to_cash() {
+        int miles = 0;
+        double cash = miles * .0035;
+        var rewardValue = new RewardValue(miles);
+        assertEquals(cash, rewardValue.getCashValue());
+    }
+    @Test
+    void convert_from_one_miles_to_cash() {
+        int miles = 1;
+        double cash = miles * .0035;
+        var rewardValue = new RewardValue(miles);
+        assertEquals(cash, rewardValue.getCashValue());
+    }
+    @Test
+    void convert_from_max_miles_to_cash() {
+        int miles = Integer.MAX_VALUE;
+        double cash = miles * .0035;
+        var rewardValue = new RewardValue(miles);
+        assertEquals(cash, rewardValue.getCashValue());
     }
 }
