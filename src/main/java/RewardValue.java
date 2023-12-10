@@ -11,7 +11,7 @@ public class RewardValue {
         this.cashValue = value;
     }
 
-    //Methods
+    //Methods Section
     double getMilesValue() {
         this.milesValue = this.cashValue / 0.0035;
         return Math.round(this.milesValue);
