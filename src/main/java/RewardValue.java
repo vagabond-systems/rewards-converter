@@ -4,17 +4,20 @@ public class RewardValue {
     private double milesValue;
 
     // Constructor
+    public RewardValue() {
+    };
+
     public RewardValue(double value) {
         this.cashValue = value;
     }
 
     //Methods
-    double getCashValue() {
-        return this.cashValue;
+    double getMilesValue() {
+        this.milesValue = this.cashValue / 0.0035;
+        return Math.round(this.milesValue);
     }
 
-    double getMilesValue() {
-        this.milesValue = this.cashValue * 0.0035;
-        return this.milesValue;
+    double getCashValue() {
+        return this.cashValue;
     }
 }

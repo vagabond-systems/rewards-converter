@@ -15,6 +15,7 @@ public class RewardValueTests {
     void create_with_miles_value() {
         int milesValue = 10000;
         var rewardValue = new RewardValue(milesValue);
+        System.out.println(rewardValue);
         assertEquals(milesValue, rewardValue.getMilesValue());
     }
 
