@@ -1,5 +1,5 @@
 public class RewardValue {
-    final double CONVERSION_RATE = 0.0035;
+    static final double CONVERSION_RATE = 0.0035;
     double cash;
 
     RewardValue(double cashValue){
