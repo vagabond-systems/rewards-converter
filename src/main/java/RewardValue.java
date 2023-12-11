@@ -32,7 +32,7 @@ public class RewardValue {
     /**
      * Converts miles to cash value
      * @param miles passed from constructor
-     * @return a cash value of these miles
+     * @return a cash value of passed miles
      */
     private double convertMilesToCash(int miles){
         return miles * 0.0035;
