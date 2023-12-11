@@ -26,7 +26,7 @@ public class RewardValue {
      * @return rounded miles
      */
     private int convertCashToMiles(double cash){
-        return (int)Math.round(cash * 285.714);
+        return (int)Math.round(cash / 0.0035);
     }
 
     /**
