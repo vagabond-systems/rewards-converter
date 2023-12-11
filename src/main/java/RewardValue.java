@@ -4,7 +4,7 @@ public class RewardValue {
 
     //cash constructor
     public RewardValue(double cashValue) {
-        this .cashValue = cashValue;
+        this.cashValue = cashValue;
     }
 
     //miles constructor
