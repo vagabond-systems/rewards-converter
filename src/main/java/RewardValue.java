@@ -1,10 +1,14 @@
 
 public class RewardValue {
     double cashvalue;
-    double milesvalue;
+    int milesvalue;
     RewardValue(double cashvalue){
         this.cashvalue=cashvalue;
-        milesvalue = 0.0035*cashvalue;
+        milesvalue = (int)(cashvalue/0.0035);
+    }
+    RewardValue(int milesvalue){
+        this.milesvalue=milesvalue;
+        cashvalue = milesvalue*0.0035;
     }
     double getMilesValue(){
         return milesvalue;
