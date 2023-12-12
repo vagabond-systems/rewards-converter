@@ -5,20 +5,19 @@ public class RewardValue {
 
     // constructors
     public RewardValue(double cashValue) {
-        if(cashValue < 0) {
+        if (cashValue < 0) {
             throw new IllegalArgumentException("Cash value must be positive");
         }
         this.cashValue = cashValue;
     }
 
     public RewardValue(int milesValue) {
-        if(milesValue < 0) {
+        if (milesValue < 0) {
             throw new IllegalArgumentException("Miles value must be positive");
         }
         this.milesValue = milesValue;
 
     }
-
 
     // methods
     public double getCashValue() {
@@ -28,4 +27,15 @@ public class RewardValue {
     public int getMilesValue() {
         return milesValue;
     }
+
+    public static int convertToMiles(double cashValue) {
+        return (int) (cashValue / milesToCashConversionRate);
+    }
+
+    public static double convertToCash(int milesValue) {
+        return milesValue * milesToCashConversionRate;
+
+
+    }
+
 }
