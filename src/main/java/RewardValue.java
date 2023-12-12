@@ -1,4 +1,6 @@
 public class RewardValue {
+
+    //instance variables
     double cashValue = 100;
     int milesValue = 10000;
     private static final double milesToCashConversionRate = 0.0035;
@@ -28,6 +30,7 @@ public class RewardValue {
         return milesValue;
     }
 
+    // conversions
     public static int convertToMiles(double cashValue) {
         return (int) (cashValue / milesToCashConversionRate);
     }
