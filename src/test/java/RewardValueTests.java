@@ -24,6 +24,7 @@ public class RewardValueTests {
         var rewardValue = new RewardValue(cashValue);
         double expected = cashValue / 0.0035;
         assertEquals(expected, rewardValue.convertCashToMiles(100));
+        //Created methods off of test case to go from cash to miles.
     }
 
     @Test
@@ -32,5 +33,6 @@ public class RewardValueTests {
         var rewardValue = new RewardValue(milesValue);
         double expected = milesValue * 0.0035;
         assertEquals(expected, rewardValue.convertMilesToCash(10000));
+        //Created methods off of test case to go from miles to cash.
     }
 }
