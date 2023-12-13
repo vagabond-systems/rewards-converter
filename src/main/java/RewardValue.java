@@ -8,7 +8,7 @@ public class RewardValue {
         this.milesValue = convertToMiles(cashValue);
     }
 
-    public RewardValue(int milesValue, boolean isMiles) {
+    public RewardValue(int milesValue) {
         this.milesValue = milesValue;
         this.cashValue = convertToCash(milesValue);
     }
