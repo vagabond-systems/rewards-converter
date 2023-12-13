@@ -1,12 +1,12 @@
 public class RewardValue {
 
-    double cash;
+    private double cash;
 
-    double getCashValue(){
+    public double getCashValue(){
         return cash;
     }
 
-    double getMilesValue(){
+    public double getMilesValue(){
         return this.cash * 0.0035;
     }
 
