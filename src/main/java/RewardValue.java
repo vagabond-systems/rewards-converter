@@ -1,8 +1,6 @@
 public class RewardValue {
-    private int milesValue;
-    private double cashValue;
-
-    private  double convertMilesToCash = 0.0035;
+    private static int milesValue;
+    private static double cashValue;
 
 
 
@@ -15,20 +13,21 @@ public class RewardValue {
 
     }
 
-   public static void convertCashToMiles(){
-
+   public static double convertToCash(){
+      return  milesValue * convertToMiles();
    }
 
-   public static void convertMileToCash(){
+   public static double convertToMiles(){
+       return cashValue / convertToCash();
 
    }
 
 
     public double getCashValue() {
-        return getCashValue();
+        return cashValue;
     }
 
     public int getMilesValue() {
-        return getMilesValue();
+        return milesValue;
     }
 }
