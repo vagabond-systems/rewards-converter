@@ -1,19 +1,32 @@
 public class RewardValue {
+    private final double cashValue;
+    public static final double exchangeRate = 0.0035;
 
-    double exchangeRate = 0.0035;
+    public RewardValue(double cashValue){
 
-    // Takes cash and returns miles value at a rate of 285.71 (the reciprocal of 0.0035)
-    public int getMilesValue(int cashValue){
-
-       int milesValue = (int) (cashValue / exchangeRate);
-
-        return milesValue;
+        this.cashValue = cashValue;
     }
 
-    // Takes miles and returns cash value at a rate of 0.0035
-    public double getCashValue(double milesValue){
-        double cashValue = milesValue * exchangeRate;
+    public RewardValue(int milesValue){
 
+        this.cashValue = conversionToCash(milesValue);
+    }
+    private static int conversionToMiles(double cashValue){
+
+        return  (int) (cashValue / exchangeRate);
+    }
+
+    private static double conversionToCash(int milesValue){
+
+        return milesValue * exchangeRate;
+    }
+
+    public double getCashValue() {
         return cashValue;
+    }
+
+    public int getMilesValue() {
+
+        return conversionToMiles(this.cashValue);
     }
 }
