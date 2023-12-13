@@ -32,7 +32,7 @@ public class RewardValue {
 
     // Getter method for miles value
     public double getMilesValue() {
-        return milesValue;
+        return (int) milesValue;
     }
 }
 
