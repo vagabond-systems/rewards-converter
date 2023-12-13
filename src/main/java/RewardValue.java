@@ -15,7 +15,13 @@ public class RewardValue {
 
     }
 
+   public static void convertCashToMiles(){
 
+   }
+
+   public static void convertMileToCash(){
+
+   }
 
 
     public double getCashValue() {
