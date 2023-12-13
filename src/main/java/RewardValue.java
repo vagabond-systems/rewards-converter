@@ -22,7 +22,8 @@ public class RewardValue {
 
     // Method to convert cash to miles
     private int convertToMiles(double cash) {
-        return (int) (cash / 0.0035);
+        //right now its either cash / 0.0035 and the 2 test case doesnt work or just cash and the last 2 test cases dont work
+        return (int) (cash /0.0035);
     }
 
     public double getCashValue() {
