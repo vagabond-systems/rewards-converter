@@ -6,18 +6,24 @@ public class RewardValue {
 //RewardValue must have a getMilesValue() method, which returns how many miles the RewardValue is worth.
 //RewardValue must convert from miles to cash at a rate of 0.0035.
     private double cashValue;
-    private double milesValue;
+    public static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
 
 //    constructor that takes in cash
     public RewardValue(double cashValue){
         this.cashValue = cashValue;
-        this.milesValue = cashToMiles(cashValue);
     }
 
 //    constructor that takes in miles
-    public RewardValue(double milesValue, boolean isMiles){
-        this.milesValue = milesValue;
-        this.cashValue = milesToCash(milesValue);
+    public RewardValue(int milesValue){
+        this.cashValue = convertToCash(milesValue);
+    }
+
+    private static int convertToMiles(double cashValue){
+        return (int) (cashValue/ MILES_TO_CASH_CONVERSION_RATE);
+    }
+
+    private static double convertToCash(int milesValue){
+        return milesValue * MILES_TO_CASH_CONVERSION_RATE;
     }
 
     public double getCashValue(){
@@ -25,18 +31,9 @@ public class RewardValue {
     }
 
     public double getMilesValue(){
-        return milesValue;
+        return convertToMiles(this.cashValue);
     }
 
-    //    private method for cash to miles conversion
-    private double cashToMiles(double cashValue){
-        return cashValue/ 0.0035;
-    }
-
-    //    private method for miles to cash conversion
-    private double milesToCash(double milesValue){
-        return milesValue * 0.0035;
-    }
 }
 
 
