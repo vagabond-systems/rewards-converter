@@ -19,7 +19,7 @@ public class RewardValue {
     }
 
     private static double convertToMiles(double cashValue){
-        return  cashValue/ MILES_TO_CASH_CONVERSION_RATE;
+        return  (int)(cashValue/ MILES_TO_CASH_CONVERSION_RATE);
     }
 
     private static double convertToCash(int milesValue){
