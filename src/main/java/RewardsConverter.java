@@ -2,25 +2,32 @@ import java.util.Scanner;
 
 public class RewardsConverter {
     public static class RewardValue {
-        private double cash;
-        private double miles;
-        public RewardValue(int cash){
-            this.cash = cash;
-            this.miles = cash/0.0035;
+        private double cashValue;
+        private int milesValue;
+    
+        public RewardValue(double cashValue) {
+            this.cashValue = cashValue;
         }
-        public RewardValue(double milesValue){
-            this.miles = milesValue;
-            this.cash = milesValue*0.0035;
+        
+        public RewardValue(int milesValue) {
+            this.cashValue = toCash(milesValue);
+        }
 
-        }
-        public double getCashValue(){
-            return cash;
-        }
-        public double getMilesValue(){
-            return miles;
+        private static int toMiles(double cashValue) {
+            return (int) (cashValue / 0.0035);
         }
     
-        
+        private static double toCash(int milesValue) {
+            return milesValue * 0.0035;
+        }
+    
+        public double getCashValue() {
+            return cashValue;
+        }
+    
+        public int getMilesValue() {
+            return toMiles(this.cashValue);
+        }
     }
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
