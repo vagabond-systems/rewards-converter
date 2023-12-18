@@ -1,4 +1,7 @@
+package main;
+
 import java.util.Scanner;
+import main.RewardValue;
 
 public class RewardsConverter {
     public static void main(String[] args) {
