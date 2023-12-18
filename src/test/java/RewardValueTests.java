@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RewardValueTests {
+    static final double MI_TO_CASH_CONVERT_RATE = 0.0035;
 
     @Test
     void create_with_cash_value() {
