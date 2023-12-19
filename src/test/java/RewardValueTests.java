@@ -3,48 +3,57 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RewardValueTests {
 
+    // Tests for constructor with cash value
     @Test
-    void create_with_cash_value() {
+    void createRewardValue_withValidCashValue_shouldCorrectlySetCashValue() {
         double cashValue = 100;
         RewardValue rewardValue = new RewardValue(cashValue);
-        assertEquals(cashValue, rewardValue.getCashValue().doubleValue());
+        assertEquals(cashValue, rewardValue.getCashValue().doubleValue(),
+                "Cash value should be set correctly in constructor.");
     }
 
+    // Tests for constructor with mile value
     @Test
-    void create_with_miles_value() {
+    void createRewardValue_withValidMilesValue_shouldCorrectlySetMilesValue() {
         double milesValue = 10000;
         RewardValue rewardValue = new RewardValue(milesValue, true);
-        assertEquals(milesValue, rewardValue.getMilesValue().doubleValue());
+        assertEquals(milesValue, rewardValue.getMilesValue().doubleValue(),
+                "Miles value should be set correctly in constructor.");
     }
 
+    // Tests for conversion from cash to miles
     @Test
-    void convert_from_cash_to_miles() {
+    void convertCashToMiles_withValidCashValue_shouldReturnCorrectMiles() {
         double cashValue = 100;
         RewardValue rewardValue = new RewardValue(cashValue);
         double expectedMiles = cashValue * RewardValue.DEFAULT_CASH_TO_MILES_CONVERSION_RATE;
-        assertEquals(expectedMiles, rewardValue.getMilesValue().doubleValue(), 0.01, "The conversion from cash to miles should match the expected value.");
+        assertEquals(expectedMiles, rewardValue.getMilesValue().doubleValue(), 0.01,
+                "Conversion from cash to miles should be accurate.");
     }
 
-
-
+    // Tests for conversion from miles to cash
     @Test
-    void convert_from_miles_to_cash() {
+    void convertMilesToCash_withValidMilesValue_shouldReturnCorrectCash() {
         double milesValue = 10000;
         RewardValue rewardValue = new RewardValue(milesValue, true);
         double expectedCash = 35.0;
-        assertEquals(expectedCash, rewardValue.getCashValue().doubleValue());
+        assertEquals(expectedCash, rewardValue.getCashValue().doubleValue(),
+                "Conversion from miles to cash should be accurate.");
     }
 
+    // Tests for invalid negative cash value
     @Test
-    void invalid_negative_cash_value_throws_exception() {
+    void createRewardValue_withNegativeCashValue_shouldThrowIllegalArgumentException() {
         double negativeCashValue = -100;
-        assertThrows(IllegalArgumentException.class, () -> new RewardValue(negativeCashValue));
+        assertThrows(IllegalArgumentException.class, () -> new RewardValue(negativeCashValue),
+                "Constructor should throw IllegalArgumentException for negative cash value.");
     }
 
+    // Tests for invalid negative miles value
     @Test
-    void invalid_negative_miles_value_throws_exception() {
+    void createRewardValue_withNegativeMilesValue_shouldThrowIllegalArgumentException() {
         double negativeMilesValue = -10000;
-        assertThrows(IllegalArgumentException.class, () -> new RewardValue(negativeMilesValue, true));
+        assertThrows(IllegalArgumentException.class, () -> new RewardValue(negativeMilesValue, true),
+                "Constructor should throw IllegalArgumentException for negative miles value.");
     }
-
 }

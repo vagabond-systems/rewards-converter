@@ -1,11 +1,9 @@
 import java.math.BigDecimal;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
-/**
- * The RewardValue class represents a value in a rewards system,
- * capable of converting between cash and airline miles.
- * It is designed to be immutable for thread-safety and consistency.
- */
 public final class RewardValue {
+    private static final Logger LOGGER = Logger.getLogger(RewardValue.class.getName());
     private static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
     public static final double DEFAULT_CASH_TO_MILES_CONVERSION_RATE = 1 / MILES_TO_CASH_CONVERSION_RATE;
 
@@ -13,22 +11,17 @@ public final class RewardValue {
     private final BigDecimal milesValue;
     private final double customCashToMilesRate;
 
-    /**
-     * Constructor for RewardValue using cash value.
-     * The mile value is calculated based on the current conversion rate.
-     *
-     * @param cashValue The cash value to be converted into miles.
-     * @throws IllegalArgumentException if cashValue is negative.
-     */
     public RewardValue(double cashValue) {
         if (cashValue < 0) {
+            LOGGER.log(Level.SEVERE, "Attempted to create RewardValue with negative cash value");
             throw new IllegalArgumentException("Cash value cannot be negative");
         }
-
         this.customCashToMilesRate = DEFAULT_CASH_TO_MILES_CONVERSION_RATE;
         this.cashValue = BigDecimal.valueOf(cashValue);
         this.milesValue = convertCashToMiles(this.cashValue);
+        LOGGER.log(Level.INFO, "Created RewardValue with cash value: " + cashValue);
     }
+
 
     /**
      * Constructor for RewardValue using mile value.
