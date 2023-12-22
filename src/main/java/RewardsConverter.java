@@ -18,3 +18,4 @@ public class RewardsConverter {
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
     }
 }
+

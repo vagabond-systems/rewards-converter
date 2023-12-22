@@ -19,12 +19,19 @@ public class RewardValueTests {
     }
 
     @Test
-    void convert_from_cash_to_miles() {
-        assert false;
+    void convert_from_cash_to_miles() 
+    {
+        double cashVal = 100;
+        var milesVal = convertCashToMiles(cashVal);
+        assertEquals(milesValue , cashVal / 0.0035);
+        
     }
 
     @Test
-    void convert_from_miles_to_cash() {
-        assert false;
+    void convert_from_miles_to_cash() 
+    {
+        double milesVal = 100;
+        var cashVal = convertMilesToCash(milesVal);
+        assertEquals(cashVal , milesVal * 0.0035);
     }
 }
