@@ -1,3 +1,4 @@
+// Import the Scanner class(gets user input) which is part of the java.util package
 import java.util.Scanner;
 
 public class RewardsConverter {
