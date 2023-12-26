@@ -7,14 +7,14 @@ public class RewardValueTests {
     @Test
     void create_with_cash_value() {
         double cashValue = 100;
-        var rewardValue = new RewardValue(cashValue);
+        var rewardValue = new RewardValue(cashValue, 0);
         assertEquals(cashValue, rewardValue.getCashValue());
     }
 
     @Test
     void create_with_miles_value() {
         int milesValue = 10000;
-        var rewardValue = new RewardValue(milesValue);
+        var rewardValue = new RewardValue(0, milesValue);
         assertEquals(milesValue, rewardValue.getMilesValue());
     }
 
