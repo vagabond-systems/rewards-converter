@@ -1,32 +1,28 @@
 public class RewardValue {
-    private static final double MILES_TO_CASH_RATE = 0.0035;
+    public static final double MILES_TO_CASH_RATE = 0.0035;
+    private final double cashValue;
 
-    private double cashValue;
-    private double milesValue;
-
-    // Constructor accepting cash value
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = cashValue * MILES_TO_CASH_RATE;
     }
 
-    // Constructor accepting miles value
-    public RewardValue(double milesValue, boolean isMiles) {
-        if (isMiles) {
-            this.milesValue = milesValue;
-            this.cashValue = milesValue / MILES_TO_CASH_RATE;
-        } else {
-            throw new IllegalArgumentException("Invalid constructor usage. Use the constructor with cash value.");
-        }
+    public RewardValue(int milesValue) {
+        this.cashValue = convertToCash(milesValue);
     }
 
-    // Getter for cash value
+    private static int convertToMiles(double cashValue) {
+        return (int) (cashValue / MILES_TO_CASH_RATE);
+    }
+
+    private static double convertToCash(int milesValue) {
+        return milesValue * MILES_TO_CASH_RATE;
+    }
+
     public double getCashValue() {
         return cashValue;
     }
 
-    // Getter for miles value
-    public double getMilesValue() {
-        return milesValue;
+    public int getMilesValue() {
+        return convertToMiles(this.cashValue);
     }
 }
