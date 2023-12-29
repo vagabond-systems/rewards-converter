@@ -18,11 +18,11 @@ public class RewardValue {
         return milesValue;
     }
     public int convertFromCashToMiles() {
-        return (int) (cashValue * 100);
+        return (int) (cashValue * 0.0035);
     }
 
     public double convertFromMilesToCash() {
-        return milesValue / 100.0;
+        return milesValue / 0.0035;
     }
 }
 
