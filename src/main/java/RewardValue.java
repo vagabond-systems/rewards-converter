@@ -9,21 +9,21 @@ public class RewardValue {
     // constructors
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
+        this.milesValue = (int) (cashValue / CONSTANT_RATE);
     }
 
     public RewardValue(int milesValue) {
         this.milesValue = milesValue;
+        this.cashValue = milesValue * CONSTANT_RATE;
     }
 
     // retrieve the cash value
     public double getCashValue() {
-        // calculate cash value from miles using the constant rate
-        return this.milesValue / CONSTANT_RATE;
+        return this.cashValue;
     }
 
     // retrieve the miles value
     public int getMilesValue() {
-        // calculate miles value from cash using the constant rate
-        return (int) (this.cashValue / CONSTANT_RATE);
+        return this.milesValue;
     }
 }
