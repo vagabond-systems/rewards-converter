@@ -1,5 +1,4 @@
 public class RewardValue {
-    public class RewardValue {
 
         // fields to store cash and miles values
         private double cashValue;
