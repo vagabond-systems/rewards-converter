@@ -4,7 +4,7 @@ public class RewardValue {
     private int milesValue;
 
     // constant conversion rate from miles to cash
-    private static final double CONSTANT_RATE = 0.0035;
+    static final double CONSTANT_RATE = 0.0035;
 
     // constructors
     public RewardValue(double cashValue) {
@@ -25,5 +25,13 @@ public class RewardValue {
     // retrieve the miles value
     public int getMilesValue() {
         return this.milesValue;
+    }
+
+    public void setCashValue(double cashValue) {
+        this.cashValue = cashValue;
+    }
+
+    public void setMilesValue(int milesValue) {
+        this.milesValue = milesValue;
     }
 }
