@@ -1,5 +1,34 @@
 import java.util.Scanner;
 
+class RewardValue {
+    private double cashValue;
+    private int milesValue;
+
+    public RewardValue(double x) {
+        cashValue = x;
+    }
+
+    public RewardValue(int x) {
+        milesValue = x;
+    }
+
+    public double getCashValue() {
+        double u = 0.0035;
+        double z = milesValue;
+        double ans = u * z;
+        return ans;
+    }
+
+    public int getMilesValue() {
+        double u = 35;
+        double v = cashValue;
+        v = v * 10000;
+        v = v / u;
+        int ans = (int) v;
+        return ans;
+    }
+}
+
 public class RewardsConverter {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
