@@ -5,10 +5,12 @@ class RewardValue{
     double miles;
 
     RewardValue(double cash){
+        this.cash=cash;
         miles=cash/0.0035;
     }
 
     RewardValue(double miles,boolean ismile){
+        this.miles=miles;
         if(ismile)
             cash=miles*0.0035;
     }
