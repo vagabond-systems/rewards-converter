@@ -13,11 +13,11 @@ public class RewardValue {
 
     public double getCashValue() {
         float milesValue = this.miles;
-        return (double) milesValue*0.0035;
+        return (double) milesValue/0.0035;
     }
 
     public float getMilesValue() {
         double cashValue = this.cash;
-        return (float) (cashValue/0.0035);
+        return (float) (cashValue*0.0035);
     }
 }
