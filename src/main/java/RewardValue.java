@@ -22,8 +22,6 @@ public class RewardValue {
     }
 
     public double convertFromMilesToCash() {
-        return milesValue / 100.0;
+        return milesValue / 100;
     }
 }
-
-
