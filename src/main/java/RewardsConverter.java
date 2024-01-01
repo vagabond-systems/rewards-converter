@@ -40,7 +40,7 @@ class RewardValue {
     public double getCashValue() {
         outputMiles = getMilesValue();
         outputCash = outputMiles * conversion;
-        return outputCash;
+        return Math.round(outputCash);
     }
 
     public int getMilesValue() {
