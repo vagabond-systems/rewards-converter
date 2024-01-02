@@ -1,4 +1,3 @@
-
 public class RewardValue {
 	
 	private final double cashValue;
