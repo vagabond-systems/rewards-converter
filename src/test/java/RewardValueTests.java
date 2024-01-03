@@ -33,3 +33,4 @@ public class RewardValueTests {
         assertEquals(expectedCashValue, rewardValue.getCashValue());
     }
 }
+//completed this alongside the previous task.
