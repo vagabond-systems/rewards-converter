@@ -1,3 +1,4 @@
+// RewardValue.java
 import java.util.Scanner;
 
 public class RewardValue {
@@ -23,10 +24,10 @@ public class RewardValue {
     }
 
     private double convertCashToMiles(double cashValue) {
-        return cashValue / 0.0035;
+        return cashValue/0.0035;
     }
 
     private double convertMilesToCash(double milesValue) {
-        return milesValue * 0.0035;
+        return milesValue*0.0035;
     }
 }
