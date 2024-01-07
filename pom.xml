@@ -17,8 +17,13 @@
     </dependencies>
 
     <properties>
+<<<<<<< HEADgit
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+=======
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
+>>>>>>> f30cb5e67d23a2059d8e021ea1c6cfcb2e1e68be
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

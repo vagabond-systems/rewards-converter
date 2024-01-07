@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import RewardsConverter.java.RewardValue;
+
+=======
+>>>>>>> f30cb5e67d23a2059d8e021ea1c6cfcb2e1e68be
 import java.util.Scanner;
 
 public class RewardsConverter {
@@ -14,7 +19,12 @@ public class RewardsConverter {
             return;
         }
         System.out.println("converting $" + input_value + " to miles");
+<<<<<<< HEAD
+        RewardValue rewardsValue;
+        rewardsValue = new RewardValue(cashValue);
+=======
         var rewardsValue = new RewardValue(cashValue);
+>>>>>>> f30cb5e67d23a2059d8e021ea1c6cfcb2e1e68be
         System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
     }
 }
