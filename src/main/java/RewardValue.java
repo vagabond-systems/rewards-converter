@@ -2,8 +2,8 @@
 
 public class RewardValue {
 
-    private final double cashValue;
-    private final double milesValue;
+    private double cashValue;
+    private double milesValue;
 
     // Constructor that accepts cash value
     public RewardValue(double cashValue) {
