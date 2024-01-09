@@ -28,6 +28,7 @@ public class RewardValueTests {
 
 
     @Test
+
     void convert_from_miles_to_cash() {
        int milesValue = 10000;
        double customerCashValue = milesValue * 0.0035;
