@@ -1,6 +1,6 @@
 public class RewardValue {
     private int miles;
-    private double cash_value;
+    private final double cash_value; //Add final keyword to ensure immutability
     public static final double CONVERSION_RATE = .0035;
 
     //Constructor - accepts cash value
