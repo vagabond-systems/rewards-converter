@@ -1,15 +1,15 @@
 public class RewardValue {
     private double cashValue;
-    private double miles;
+    private int miles;
 
     // constructor accepting cash value
-    public RewardValue(double cash){
+    public RewardValue(miles cash){
         this.cashValue = cash;
         this.miles = cash / 0.0035f;
     } 
     
     // constructor accepting miles value
-    public RewardValue(double miles){
+    public RewardValue(int miles){
         this.cashValue = miles * 0.0035f;
         this.miles = miles;
     } 
@@ -17,7 +17,7 @@ public class RewardValue {
     public double getCashValue() {
         return this.cashValue;
     }
-    public double getMilesValue() {
+    public int getMilesValue() {
         return this.miles;
     }
 }
