@@ -1,7 +1,7 @@
 public class RewardValue {
     private double cash;
     private int miles;
-    private static final double CONVERSATION_RATE_MILES_TO_CASH=0.0035;
+    public static final double CONVERSATION_RATE_MILES_TO_CASH=0.0035;
     public RewardValue(double cash) {
         this.cash= cash;
         convertCashToMiles();
