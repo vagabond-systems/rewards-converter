@@ -6,11 +6,9 @@ public class RewardValue {
     //Constructor - accepts cash value
     public RewardValue(double cashValue){
         this.cashValue = cashValue;
-        this.milesValue = getMilesValue();
     }
     //Constructor - accepts miles
     public RewardValue(int milesValue){
-        this.milesValue = milesValue;
         this.cashValue = convertToCash(milesValue);
     }
 
