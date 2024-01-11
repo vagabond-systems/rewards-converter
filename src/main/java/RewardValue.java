@@ -16,11 +16,11 @@ public class RewardValue {
 
     // Returns the cash value of the RewardValue.
     public double getCashValue(){
-        return this.miles * CONVERSION_RATE;
+        return this.miles * MILES_TO_CASH_CONVERSION_RATE;
     }
 
     // Return how many miles the RewardValue is worth.
     public int getMilesValue(){
-        return (int)(this.cash_value / CONVERSION_RATE);
+        return (int)(this.cash_value / MILES_TO_CASH_CONVERSION_RATE);
     }
 }
