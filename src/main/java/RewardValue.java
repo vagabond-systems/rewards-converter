@@ -13,11 +13,12 @@ public class RewardValue {
     }
 
     // Separate conversion logic from getters
-    private int convertToMiles(double cashValue){
+    // static functions since do not rely on or need the specific instance variables
+    private static int convertToMiles(double cashValue){
         return (int)(cashValue / MILES_TO_CASH_CONVERSION_RATE);
     }
 
-    private double convertToCash(int milesValue){
+    private static double convertToCash(int milesValue){
         return milesValue * MILES_TO_CASH_CONVERSION_RATE;
     }
 
