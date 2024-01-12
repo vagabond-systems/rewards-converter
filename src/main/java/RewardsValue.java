@@ -1,6 +1,4 @@
 class RewardValue {
-    // Unused variable
-    // private int milesValue; 
     private final double cashValue;
     public static final double MILES_TO_CASH_CONVERSION_RATE = .0035;
 
