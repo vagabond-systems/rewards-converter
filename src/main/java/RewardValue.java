@@ -7,7 +7,7 @@ public class RewardValue {
     }
     public RewardValue(double milesValue, boolean isMiles){
         this.milesValue = milesValue;
-        this.cashValue = cashToMiles(milesValue);
+        this.cashValue = milesToCash(milesValue);
 
     }    public double getCashValue(){
         return cashValue;
