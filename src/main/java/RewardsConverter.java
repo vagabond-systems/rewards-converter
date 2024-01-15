@@ -1,3 +1,5 @@
+import doer.RewardValue;
+
 import java.util.Scanner;
 
 public class RewardsConverter {
