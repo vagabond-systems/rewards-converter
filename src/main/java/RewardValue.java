@@ -1,7 +1,7 @@
 public class RewardValue {
 
     private final double cashValue;
-    private final double MILE_TO_CASH_CORVERS_RATE = 0.0035;
+    public final double MILE_TO_CASH_CORVERS_RATE = 0.0035;
 
     //constructor to accept cash value
     public RewardValue(double cashValue) {
@@ -17,14 +17,14 @@ public class RewardValue {
         return milesValue * MILE_TO_CASH_CORVERS_RATE;
     }
 
-    public double convertToMiles(double cashValue){
-        return cashValue/MILE_TO_CASH_CORVERS_RATE;
+    public int convertToMiles(double cashValue){
+        return (int) (cashValue/MILE_TO_CASH_CORVERS_RATE);
     }
 
     public Double getCashValue(){
         return cashValue;
     }
-    public Double getMilesValue(){
+    public int getMilesValue(){
         return convertToMiles(this.cashValue);
     }
 }
