@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project> xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -11,23 +11,11 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
- HEAD
-            <version>5.10.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.4.0</version>
-
-            <version>RELEASE</version>
- 787c8be52b75e54514428e38eda8e02a6bbff177
+            <version>5.8.2</version> <!-- Replace with the latest stable version -->
             <scope>test</scope>
         </dependency>
     </dependencies>
 
-HEAD
-787c8be52b75e54514428e38eda8e02a6bbff177
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
