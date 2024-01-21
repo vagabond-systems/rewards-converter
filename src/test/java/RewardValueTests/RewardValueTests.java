@@ -1,7 +1,10 @@
 package RewardValueTests;
 
+import RewardsConverter.RewardValue;
+
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RewardValueTests {
 
@@ -21,7 +24,7 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        RewardValue rewardValue = new RewardValue();
+        RewardValue rewardValue = new RewardValue(100,0.1);
         double cashAmount = 100.0;
         double expectedMiles = 1000.0; // You need to replace this with the actual expected miles based on the conversion rate
         double delta = 0.001; // A small delta to account for floating-point precision issues
@@ -33,7 +36,7 @@ public class RewardValueTests {
 
     @Test
     void convert_from_miles_to_cash() {
-        RewardValue rewardValue = new RewardValue();
+        RewardValue rewardValue = new RewardValue(100,0.1);
         double miles = 1000.0;
         double expectedCash = 100.0; // You need to replace this with the actual expected cash based on the conversion rate
         double delta = 0.001;

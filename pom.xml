@@ -11,10 +11,17 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
