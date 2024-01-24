@@ -7,7 +7,7 @@ public class RewardValue {
         this.miles =  (this.cash / milesToCashRate);
     }
 
-    RewardValue(float miles)
+    RewardValue(int miles)
     {
         this.miles = miles;
         this.cash = (milesToCashRate * this.miles);
