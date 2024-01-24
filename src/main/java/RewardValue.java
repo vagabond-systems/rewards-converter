@@ -1,6 +1,7 @@
 public class RewardValue {
+    private final double cash, miles;
     final double  milesToCashRate = 0.0035;
-    double cash, miles;
+
     RewardValue(double cash)
     {
         this.cash = cash;
