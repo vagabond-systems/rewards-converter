@@ -1,30 +1,66 @@
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RewardValueTests {
 
     @Test
-    void create_with_cash_value() {
-        double cashValue = 100;
-        var rewardValue = new RewardValue(cashValue);
-        assertEquals(cashValue, rewardValue.getCashValue());
+    public void testCashToMilesConversion() {
+        // Given
+        double cashValue = 100.0;
+        RewardValue rewardValue = new RewardValue(cashValue);
+
+        // When
+        double expectedMilesValue = cashValue / 0.0035;
+        double actualMilesValue = rewardValue.getMilesValue();
+
+        // Then
+        assertEquals(expectedMilesValue, actualMilesValue, 0.001); // Using delta for double comparison
     }
 
     @Test
-    void create_with_miles_value() {
-        int milesValue = 10000;
-        var rewardValue = new RewardValue(milesValue);
-        assertEquals(milesValue, rewardValue.getMilesValue());
+    public void testGetCashValue() {
+        // Given
+        double cashValue = 50.0;
+        RewardValue rewardValue = new RewardValue(cashValue);
+
+        // When
+        double actualCashValue = rewardValue.getCashValue();
+
+        // Then
+        assertEquals(cashValue, actualCashValue, 0.001);
     }
 
     @Test
-    void convert_from_cash_to_miles() {
-        assert false;
+    public void testGetMilesValue() {
+        // Given
+        double cashValue = 75.0;
+        RewardValue rewardValue = new RewardValue(cashValue);
+
+        // When
+        double actualMilesValue = rewardValue.getMilesValue();
+
+        // Then
+        double expectedMilesValue = cashValue / 0.0035;
+        assertEquals(expectedMilesValue, actualMilesValue, 0.001);
     }
 
     @Test
-    void convert_from_miles_to_cash() {
-        assert false;
+    public void testConstructorWithZeroCashValue() {
+        // Given
+        double cashValue = 0.0;
+
+        // When
+        RewardValue rewardValue = new RewardValue(cashValue);
+
+        // Then
+        assertEquals(cashValue, rewardValue.getCashValue(), 0.001);
+        assertEquals(0.0, rewardValue.getMilesValue(), 0.001);
     }
+
+    // Add more tests as needed for different scenarios
+
 }
+
+
+
+
