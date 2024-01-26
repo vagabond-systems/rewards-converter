@@ -6,11 +6,11 @@ public class RewardValue {
     private double cash = 0.0;
 
     // mile field
-    private double miles =0.0;
+    private final double miles =0.0;
 
     // constructor
     public RewardValue(double cash){
-        this.miles = this.CovertCashToMiles(cash);
+        this.cash = cash;
     }
 
     // constructor
@@ -20,11 +20,11 @@ public class RewardValue {
 
     // covert miles to cash method
     public double CovertMilesToCash(int miles){
-        return  miles/MILES_TO_CASH_CONVERSION_RATE;
+        return  miles * MILES_TO_CASH_CONVERSION_RATE;
     }
     // covert cash to mile method
     public double CovertCashToMiles(double cash){
-        return  cash * MILES_TO_CASH_CONVERSION_RATE;
+        return  (int) (cash / MILES_TO_CASH_CONVERSION_RATE);
     }
 // 1 mile = $0.0035
 
@@ -35,6 +35,6 @@ public class RewardValue {
 
     // mile getter
     public double getMilesValue() {
-        return miles;
+        return CovertCashToMiles(this.cash);
     }
 }
