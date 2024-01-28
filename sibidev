@@ -1,0 +1,65 @@
+package rewardconvertersystem;
+import java.util.Scanner;
+
+public class rewardsconverter {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Credit Card Rewards Converter!");
+        System.out.println("Please enter a cash value to convert to airline miles: ");
+        System.out.println("Please enter a airline miles to convert to cash value: ");
+        var input_value = scanner.nextLine();
+        var input=scanner.nextLine();
+        double cashValue;
+        int milesValue;
+        try {
+            cashValue = Double.parseDouble(input_value);
+            milesValue = Integer.parseInt(input);
+        } catch (NumberFormatException exception) {
+            System.out.println("Could not parse input value as a double, exiting");
+            return;
+        }
+        System.out.println("converting $" + input_value + " to miles");
+        var rewardsValue = new rewardValue(cashValue);
+        var milesvalue = new rewardValue(milesValue);
+        System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        System.out.println("$" + input + " is worth " + rewardsValue.getCashValue() + " cash");
+    }
+}
+
+//Main.java package
+public class rewardValue {
+ private double cashValue;
+ private double milesValue;
+
+ // Constructor that accepts cash value
+ public rewardValue(double cashValue) {
+     this.cashValue = cashValue;
+     this.milesValue = convertToMiles(cashValue);
+ }
+
+ // Constructor that accepts miles value
+ public rewardValue(int milesValue) {
+     this.milesValue = milesValue;
+     this.cashValue = convertToCash(milesValue);
+ }
+
+ // Method to get the cash value
+ public double getCashValue() {
+     return cashValue;
+ }
+
+ // Method to get the miles value
+ public double getMilesValue() {
+     return milesValue;
+ }
+
+ // Helper method to convert miles to cash
+ private double convertToCash(double miles) {
+     return miles * 0.0035;
+ }
+
+ // Helper method to convert cash to miles
+ private double convertToMiles(double cash) {
+     return cash / 0.0035;
+ }
+}
