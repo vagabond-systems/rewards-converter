@@ -9,8 +9,8 @@ public class RewardsConverter {
         }
 
         public double getMilesValue() {
-            // Implement the logic to calculate miles based on cashValue
-            return cashValue * 2; // Placeholder logic, replace with actual calculation
+
+            return cashValue * 2;
         }
     }
 
