@@ -1,6 +1,17 @@
 import java.util.Scanner;
 
 public class RewardsConverter {
+    public static class RewardValue{
+        private double cashValue;
+
+        public RewardValue(double cashValue){
+            this.cashValue = cashValue;
+        }
+
+        public double getMilesValue(){
+            return cashValue * 0.0035;
+        }
+    }
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         System.out.println("Welcome to the Credit Card Rewards Converter!");
