@@ -3,15 +3,20 @@ import java.util.Scanner;
 public class RewardsConverter {
     public static class RewardValue {
         private double cashValue;
+        boolean isMilesMode;
 
         public RewardValue(double cashValue) {
             this.cashValue = cashValue;
         }
 
         public double getMilesValue() {
-
-            return cashValue * 2;
+            if (isMilesMode) {
+                return cashValue;
+            } else {
+                return cashValue * 0.0035; // Conversion rate
+            }
         }
+
     }
 
     public static void main(String[] args) {
