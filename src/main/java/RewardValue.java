@@ -10,11 +10,11 @@ public class RewardValue {
         this.milesValue = (int) (cashValue / 0.0035); // Convert cash to miles
     }
 
-    // // Constructor accepting miles value
-    // public RewardValue(int milesValue) {
-    //     this.milesValue = milesValue;
-    //     this.cashValue = milesValue * 0.0035; // Convert miles to cash
-    // }
+    // Constructor accepting miles value
+    public RewardValue(int milesValue) {
+        this.milesValue = milesValue;
+        this.cashValue = milesValue * 0.0035; // Convert miles to cash
+    }
 
     // Method to get cash value
     public double getCashValue() {
