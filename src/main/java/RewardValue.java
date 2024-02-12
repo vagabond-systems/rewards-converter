@@ -1,7 +1,7 @@
 public class RewardValue {
     private double cashValues ;
     private int milesValues ;
-    private static final double mileToCashRate = 0.0035;
+    static final double mileToCashRate = 0.0035;
     public RewardValue (double cashValues){ 
         this.cashValues =cashValues ;
         this.milesValues=(int) (cashValues/mileToCashRate);
@@ -17,6 +17,12 @@ public class RewardValue {
     }
     public int getMilesValue(){
      return milesValues;
-    } //    
+    } //   
+    // public int  convertToMiles  (){
+    //     return  (int) (cashValues/mileToCashRate);        
+    // } 
+    // public double convertToCash(){
+    //     return milesValues*mileToCashRate; 
+    // }
 
 }
