@@ -31,7 +31,7 @@ public class RewardValueTests {
     void convert_from_miles_to_cash() {
         double milesValue = 1000;
         double rate = 0.0035;
-        double cashExpected = milesValue * rate / rate; //
+        double cashExpected = milesValue * rate / rate;
         var rewardValue = new RewardValue(milesValue);
         assertEquals(cashExpected, rewardValue.getCashValue());
     }
