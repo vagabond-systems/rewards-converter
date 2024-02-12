@@ -17,6 +17,6 @@ public class RewardValue {
     }
     public int getMilesValue(){
      return milesValues;
-    }
+    } //    
 
 }
