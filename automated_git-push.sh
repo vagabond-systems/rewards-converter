@@ -13,7 +13,7 @@ git add .
 
 # Commit the changes with a timestamp
 timestamp=$(date +"%Y-%m-%d %T")
-commit_message="Task 1: Git setup - Automated commit at $timestamp"
+commit_message="Task 1: RewardValue class: cash val & mile val objects - Automated commit at $timestamp"
 git commit -m "$commit_message"
 
 # Push the changes to the remote repository
