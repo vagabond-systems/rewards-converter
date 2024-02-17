@@ -80,3 +80,8 @@ for the RewardValue class already exists. It contains four tests, two of which
 are not yet complete. Your task is to complete the suite and ensure all tests
 pass. Once you’re finished, you’ll submit your work by creating a pull request
 to merge your branch into the main.
+
+# My Pull Request Solution
+-  PR: https://github.com/vagabond-systems/rewards-converter/pull/851
+-  PR source: https://github.com/bshongwe/rewards-converter/tree/reward-value
+
