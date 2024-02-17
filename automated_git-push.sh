@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the branch name
-branch_name="ernest-SE-lite"
+branch_name="reward-value"
 
 # Switch to the branch
 git checkout $branch_name
@@ -13,7 +13,7 @@ git add .
 
 # Commit the changes with a timestamp
 timestamp=$(date +"%Y-%m-%d %T")
-commit_message="Task 1: Test objects - cash value & miles value - Automated commit at $timestamp"
+commit_message="Task 1: Branch creation & switch for final submission - Automated commit at $timestamp"
 git commit -m "$commit_message"
 
 # Push the changes to the remote repository
