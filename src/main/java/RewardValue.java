@@ -1,27 +1,25 @@
 public class RewardValue {
 
-    public double cash;
-    public double miles;
+    private final double cash;
+    public static final double CONVERSION_MILES_CASH = 0.035;
 
 
     public RewardValue(double cash) {
         this.cash = cash;
-        this.miles = cash / 0.0035;
     }
 
 
     public RewardValue(int miles) {
-        this.cash = 0.0035 * miles;
-        this.miles = miles;
+        this.cash = convertToCash(miles);
     }
 
+    private static int convertToMiles( double cash){
+        return (int) (cash / CONVERSION_MILES_CASH);
+    }
 
-//    I'm not providing getters and setters but in case they are needed
-//    it would be similar to the constructor:
-//    public void setMiles( double miles){
-//    this.miles = miles;
-//    this.cash = miles * 0.0035;
-//    }
+    private static double convertToCash(int miles){
+        return miles * CONVERSION_MILES_CASH;
+    }
 
 
     public double getCashValue(){
@@ -30,7 +28,7 @@ public class RewardValue {
 
 
     public double getMilesValue() {
-        return miles;
+        return convertToMiles(this.cash);
     }
 
 }
