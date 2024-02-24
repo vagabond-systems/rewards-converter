@@ -18,7 +18,7 @@ public class RewardValue {
 
     // Getter method for cashValue
     public double getCashValue() {
-        return cashValue;
+        return cashValue; 
     }
 
     // Getter method for milesValue
