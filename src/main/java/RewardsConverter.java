@@ -1,4 +1,6 @@
 import java.util.Scanner;
+// Import statement for RewardValue class (if needed, though not necessary in the same package)
+import main.java.RewardValue;
 
 public class RewardsConverter {
     public static void main(String[] args) {

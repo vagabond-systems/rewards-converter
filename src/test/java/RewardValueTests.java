@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+// Import statement for RewardValue class (if needed, though not necessary in the same package)
+import main.java.RewardValue;
 
 public class RewardValueTests {
 
@@ -20,11 +22,17 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        double cashValue = 100;
+        var rewardValue = new RewardValue(cashValue);
+        double expectedMilesValue = cashValue / 0.0035;
+        assertEquals(expectedMilesValue, rewardValue.getMilesValue(), 0.01);
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        int milesValue = 10000;
+        var rewardValue = new RewardValue(milesValue);
+        double expectedCashValue = milesValue * 0.0035;
+        assertEquals(expectedCashValue, rewardValue.getCashValue(), 0.01);
     }
 }
