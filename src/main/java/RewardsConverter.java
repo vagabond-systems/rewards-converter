@@ -2,19 +2,27 @@ import java.util.Scanner;
 
 public class RewardsConverter {
     public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
+
+        Scanner inputScanner = new Scanner(System.in);
         System.out.println("Welcome to the Credit Card Rewards Converter!");
-        System.out.println("Please enter a cash value to convert to airline miles: ");
-        var input_value = scanner.nextLine();
-        double cashValue;
-        try {
-            cashValue = Double.parseDouble(input_value);
-        } catch (NumberFormatException exception) {
-            System.out.println("Could not parse input value as a double, exiting");
-            return;
+
+        double cashValue = -1.00;
+        while (cashValue <= 0.00) {
+            try {
+                System.out.print("Please enter a cash value to convert to airline miles: ");
+                cashValue = Double.parseDouble(inputScanner.nextLine());
+                if (cashValue <= 0.00) {
+                    System.out.println("Invalid input. Cash value must be greater than 0.");
+                }
+            } catch (NumberFormatException exc) {
+                System.out.println("Invalid input. Please enter a valid numeric value.");
+            }
         }
-        System.out.println("converting $" + input_value + " to miles");
+
+        System.out.println("Converting $" + cashValue + " to miles");
         var rewardsValue = new RewardValue(cashValue);
-        System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+        System.out.println("$" + cashValue + " is worth " + rewardsValue.getMilesValue() + " miles");
+
+        inputScanner.close();
     }
 }
