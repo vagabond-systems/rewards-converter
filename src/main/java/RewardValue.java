@@ -1,34 +1,34 @@
+
+
 public class RewardValue{
 	private double cashValue;
-	private int miles;
+	private int milesValue;
 	
 	// defines first constructor that accepts cash
 	public RewardValue(double cashValue) {
 		this.cashValue = cashValue;
-		this.miles = 0;
 	}
 	
 	// defines second constructor that accepts miles
-	public RewardValue(int miles) {
-		this.miles = miles;
-		this.cashValue = 0;
+	public RewardValue(int milesValue) {
+		this.milesValue = milesValue;
 	}
 	
 	// getter method for cash value
-	public double getCash() {
+	public double getCashValue() {
 		return cashValue;
 	}
 	
 	// getter method for miles value
-	public int getMiles() {
-		return miles;
+	public int getMilesValue() {
+		return milesValue;
 	}
 	
-	public int getCashValue() {
-		return (int) (miles * 0.0035);
+	public int convertToCash() {
+		return (int) (milesValue * 0.0035);
 	}
 	
-	public double getMilesValue() {
+	public double convertToMiles() {
 		return (int) (cashValue / 0.0035);
 	}
 	
