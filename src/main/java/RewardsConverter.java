@@ -1,20 +1,36 @@
-import java.util.Scanner;
+import org.junit.jupiter.api.Test;
 
-public class RewardsConverter {
-    public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Credit Card Rewards Converter!");
-        System.out.println("Please enter a cash value to convert to airline miles: ");
-        var input_value = scanner.nextLine();
-        double cashValue;
-        try {
-            cashValue = Double.parseDouble(input_value);
-        } catch (NumberFormatException exception) {
-            System.out.println("Could not parse input value as a double, exiting");
-            return;
-        }
-        System.out.println("converting $" + input_value + " to miles");
-        var rewardsValue = new RewardValue(cashValue);
-        System.out.println("$" + input_value + " is worth " + rewardsValue.getMilesValue() + " miles");
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class RewardValueTests {
+
+    @Test
+    void create_with_cash_value() {
+        double cashValue = 100;
+        var rewardValue = new RewardValue(cashValue);
+        assertEquals(cashValue, rewardValue.getCashValue());
+    }
+
+    @Test
+    void create_with_miles_value() {
+        int milesValue = 10000;
+        var rewardValue = new RewardValue(milesValue);
+        assertEquals(milesValue, rewardValue.getMilesValue());
+    }
+
+    @Test
+    void convert_from_cash_to_miles() {
+        double cashValue = 100;
+        int expectedMilesValue = (int) (cashValue / RewardValue.MILES_TO_CASH_CONVERSION_RATE);
+        var rewardValue = new RewardValue(cashValue);
+        assertEquals(expectedMilesValue, rewardValue.getMilesValue());
+    }
+
+    @Test
+    void convert_from_miles_to_cash() {
+        int milesValue = 10000;
+        double expectedCashValue = milesValue * RewardValue.MILES_TO_CASH_CONVERSION_RATE;
+        var rewardValue = new RewardValue(milesValue);
+        assertEquals(expectedCashValue, rewardValue.getCashValue());
     }
 }
