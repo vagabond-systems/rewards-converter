@@ -11,4 +11,8 @@ public class RewardValue {
 
         return this.cashValue * 0.0035;
     }
+    public double getCashValue(){
+
+        return this.cashValue ;
+    }
 }
