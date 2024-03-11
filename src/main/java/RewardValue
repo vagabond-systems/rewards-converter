@@ -3,7 +3,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class RewardValue
+public class RewardValue    
 {
     private int milesValue;
     private double cashValue;
