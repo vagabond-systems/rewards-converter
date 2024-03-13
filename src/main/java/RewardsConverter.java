@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class RewardsConverter {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class RewardsConverter {
         } catch (NumberFormatException exception) {
             System.out.println("Could not parse input value as a double, exiting");
             return;
-    
+            
         }
         System.out.println("converting $" + input_value + " to miles");
         var rewardsValue = new RewardValue(cashValue);
