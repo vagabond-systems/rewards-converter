@@ -1,7 +1,7 @@
 public class RewardValue {
     private double cash;
     private int miles;
-    private static final double CONVERSION = 0.0035;
+    public static final double CONVERSION = 0.0035;
 
     public RewardValue(double cashVal) {
         cash = cashVal;
