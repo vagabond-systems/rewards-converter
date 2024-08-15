@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "RewardsConverter",
+      "request": "launch",
+      "mainClass": "RewardsConverter",
+      "projectName": "rewards-converter"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "415 ts-node debug Launch Program",
+      "runtimeArgs": ["-r", "ts-node/register", "--loader", "ts-node/esm"],
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${file}",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ]
+    }
+  ]
+}
