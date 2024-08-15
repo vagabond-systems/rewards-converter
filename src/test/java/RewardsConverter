@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class RewardsConverter {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Credit Card Rewards Converter!");
+        System.out.println("Would you like to convert from cash to miles or miles to cash?");
+        System.out.println("Type '1' for Cash to Miles, or '2' for Miles to Cash: ");
+        var choice = scanner.nextLine();
+
+        if (choice.equals("1")) {
+            // Cash to Miles conversion
+            System.out.println("Please enter a cash value to convert to airline miles: ");
+            var input_value = scanner.nextLine();
+            double cashValue;
+            try {
+                cashValue = Double.parseDouble(input_value);
+            } catch (NumberFormatException exception) {
+                System.out.println("Could not parse input value as a double, exiting");
+                return;
+            }
+            System.out.println("Converting $" + cashValue + " to miles...");
+            var rewardsValue = new RewardValue(cashValue);
+            System.out.println("$" + cashValue + " is worth " + rewardsValue.getMilesValue() + " miles");
+        } else if (choice.equals("2")) {
+            // Miles to Cash conversion
+            System.out.println("Please enter a miles value to convert to cash: ");
+            var input_value = scanner.nextLine();
+            double milesValue;
+            try {
+                milesValue = Double.parseDouble(input_value);
+            } catch (NumberFormatException exception) {
+                System.out.println("Could not parse input value as a double, exiting");
+                return;
+            }
+            System.out.println("Converting " + milesValue + " miles to cash...");
+            var rewardsValue = new RewardValue(milesValue, true);
+            System.out.println(milesValue + " miles is worth $" + rewardsValue.getCashValue());
+        } else {
+            System.out.println("Invalid choice, exiting program.");
+        }
+    }
+}
+
+class RewardValue {
+    private double cashValue;
+    private double milesValue;
+    private static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
+
+    // Constructor that accepts a cash value
+    public RewardValue(double cashValue) {
+        this.cashValue = cashValue;
+        this.milesValue = cashValue / MILES_TO_CASH_CONVERSION_RATE;
+    }
+
+    // Constructor that accepts a value in miles
+    public RewardValue(double milesValue, boolean isMiles) {
+        this.milesValue = milesValue;
+        this.cashValue = milesValue * MILES_TO_CASH_CONVERSION_RATE;
+    }
+
+    // Method to get the cash value
+    public double getCashValue() {
+        return cashValue;
+    }
+
+    // Method to get the miles value
+    public double getMilesValue() {
+        return milesValue;
+    }
+}
