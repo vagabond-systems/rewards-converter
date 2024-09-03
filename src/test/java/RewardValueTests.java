@@ -15,16 +15,26 @@ public class RewardValueTests {
     void create_with_miles_value() {
         int milesValue = 10000;
         var rewardValue = new RewardValue(milesValue);
-        assertEquals(milesValue, rewardValue.getMilesValue());
+        assertEquals(milesValue, rewardValue.getMilesValue(),"Miles values is incorrect");
+        double expectedCash = milesValue * 0.0035;
+        System.out.println("Expected cash: " + expectedCash);
+        System.out.println("Actual cash: " + rewardValue.getCashValue());
+        assertEquals(expectedCash, rewardValue.getCashValue(), "Cash to miles conversion failed");
     }
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        double cashValue = 100;
+        RewardValue rewardValue = new RewardValue(cashValue);
+        int expectedMiles = (int) (cashValue / 0.0035);
+        assertEquals(expectedMiles, rewardValue.getMilesValue(), "Cash to miles conversion failed");
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        int milesValue = 10000;
+        RewardValue rewardValue = new RewardValue(milesValue);
+        double expectedCash = milesValue * 0.0035;
+        assertEquals(expectedCash, rewardValue.getCashValue(),"Miles to cash conversion failed");
     }
 }
