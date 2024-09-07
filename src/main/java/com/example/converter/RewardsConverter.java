@@ -1,3 +1,5 @@
+package com.example.converter;
+
 import java.util.Scanner;
 
 public class RewardsConverter {
