@@ -1,24 +1,24 @@
 public class RewardValue{
 
     private final double cash;
-    private final double miles;
 
     // Constructor for cash value
     public RewardValue(double cash) {
         this.cash = cash;
-        this.miles = cash / 0.0035;
     }
 
     // Constructor for miles value
-    public RewardValue(double miles, boolean isMiles) {
-        if (isMiles) {
-            this.miles = miles;
-            this.cash = miles * 0.0035;
-        } else {
-            throw new IllegalArgumentException("Invalid flag for miles constructor");
-        }
+    public RewardValue(int miles){
+        this.cash = convertToCash(miles);
     }
 
+    public int convertToMiles(double cash){
+        return (int) (cash/0.0035);
+    }
+
+    public double convertToCash(int miles){
+        return miles * 0.0035;
+    }
     // Getter for cash value
     public double getCashValue() {
         return cash;
@@ -26,7 +26,7 @@ public class RewardValue{
 
     // Getter for miles value
     public double getMilesValue() {
-        return miles;
+        return convertToMiles(cash);
     }
 }
 
