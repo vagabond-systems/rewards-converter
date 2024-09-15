@@ -24,7 +24,7 @@ public class RewardValueTests {
     }
 
     @Test
-    void convert_from_miles_to_cash() {
-        assert false;
+    void convert_from_miles_to_cash() {assert false;
+
     }
 }
