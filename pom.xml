@@ -14,6 +14,12 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+    
+      <dependency>
+        <groupId>edu.brown.cs.burlap</groupId>
+        <artifactId>burlap_rosbridge</artifactId>
+        <version>3.0.1</version>
+      </dependency>
     </dependencies>
 
     <properties>
