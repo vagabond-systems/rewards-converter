@@ -7,14 +7,37 @@
     <groupId>com.vagabondsystems</groupId>
     <artifactId>rewards-converter</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
+        <!-- JUnit 5 (Jupiter) API dependency -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>[5.0.0,5.9.3]</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit 5 (Jupiter) Engine dependency for running the tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>[5.0.0,5.9.3]</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>

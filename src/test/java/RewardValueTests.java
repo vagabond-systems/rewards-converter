@@ -1,30 +1,35 @@
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class RewardValueTests {
 
+    // Test the conversion from cash to miles
     @Test
-    void create_with_cash_value() {
-        double cashValue = 100;
-        var rewardValue = new RewardValue(cashValue);
-        assertEquals(cashValue, rewardValue.getCashValue());
+    public void testCashToMilesConversion() {
+        // Arrange
+        double cashValue = 100.0;  // Sample cash value
+        RewardValue rewardValue = new RewardValue(cashValue);
+
+        // Act
+        double miles = rewardValue.getMilesValue();
+
+        // Assert
+        double expectedMiles = cashValue / 0.0035;  // As per conversion rate 1 mile = 0.0035 USD
+        assertEquals(expectedMiles, miles, "Cash to Miles conversion failed");
     }
 
+    // Test the conversion from miles to cash
     @Test
-    void create_with_miles_value() {
-        int milesValue = 10000;
-        var rewardValue = new RewardValue(milesValue);
-        assertEquals(milesValue, rewardValue.getMilesValue());
-    }
+    public void testMilesToCashConversion() {
+        // Arrange
+        int milesValue = 10000;  // Sample miles value
+        RewardValue rewardValue = new RewardValue(milesValue);
 
-    @Test
-    void convert_from_cash_to_miles() {
-        assert false;
-    }
+        // Act
+        double cash = rewardValue.getCashValue();
 
-    @Test
-    void convert_from_miles_to_cash() {
-        assert false;
+        // Assert
+        double expectedCash = milesValue * 0.0035;  // As per conversion rate 1 mile = 0.0035 USD
+        assertEquals(expectedCash, cash, "Miles to Cash conversion failed");
     }
 }
