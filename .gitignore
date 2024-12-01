@@ -1,2 +1,9 @@
 .idea/
 target/
+# Ignore compiled class files
+/bin/
+
+# Ignore library dependencies
+/lib/
+
+src/bin/
